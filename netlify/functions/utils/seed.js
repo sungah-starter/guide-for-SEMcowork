@@ -80,6 +80,13 @@ nav.toc ul ul a{font-weight:400;font-size:13.5px;color:var(--ink-soft);}
   padding:2px 9px;border-radius:999px;vertical-align:middle;white-space:nowrap;}
 .tag-must{background:var(--ink);color:#fff;}
 .tag-note{background:#fff;color:var(--muted);border:1px solid var(--line);}
+.acc{border:1px solid var(--line);border-radius:8px;margin:10px 0 4px;padding:0 14px;}
+.acc summary{cursor:pointer;list-style:none;padding:11px 0;font-weight:700;font-size:14px;color:var(--ink);}
+.acc summary::-webkit-details-marker{display:none;}
+.acc summary::before{content:"▸";display:inline-block;width:14px;color:var(--muted);}
+.acc[open] summary::before{content:"▾";}
+.acc-body{padding:2px 0 14px;}
+@media print{.acc{border:none;padding:0;} .acc summary{display:none;} .acc-body{padding:0;}}
 .script{
   margin:0 0 14px;padding:14px 18px;background:var(--soft);
   border-left:3px solid var(--ink);border-radius:0 6px 6px 0;color:var(--ink);
@@ -181,7 +188,7 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
         <li><strong>준비물</strong>
           <ul>
             <li>최신 버전 교안(PPT) — 교안은 계속 수정될 예정이므로 강의 직전 항상 최신본 여부 확인.</li>
-            <li>SEMCo-Work 계정 — 강사와 교육생 모두 공통 계정을 사용합니다. 계정은 운영자(보조강사)가 관리하며 <strong>교육생에게 공유하지 않습니다</strong>.</li>
+            <li>SEMCo-Work 계정 — 강사와 교육생 모두 공통 계정을 사용합니다. 계정은 고객사 운영자와 보조강사가 관리하며 <strong>교육생에게 공유하지 않습니다</strong>.</li>
             <li>전체 서버 장애 대비용 사전 녹화 시연영상(고객사 제공 예정).</li>
             <li>마이크·노트북 등 현장 장비(세부 점검 항목은 1.5 참고).</li>
           </ul>
@@ -197,7 +204,7 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       <table class="site-table">
         <thead><tr><th>용어</th><th>비고</th></tr></thead>
         <tbody>
-          <tr><td>SEMCo-Work(샘코워크)</td><td>전체 적용. <strong>삼성전기 자체개발 AI모델을 적용한 고유 플랫폼 및 서비스, SEMCo-Work 사용 교육입니다.</strong> 클로드 코워크 환경과 유사하며, PC의 파일·폴더를 직접 읽기·쓰기·이동·복사·삭제·변환할 수 있고, 다양한 전문 스킬(Agent)을 호출해 반복 작업을 자동화합니다. 일반 챗봇처럼 텍스트로만 답하는 것이 아니라, 문서(Word·Excel·PPT·PDF) 자동 생성, 웹 검색, 이메일 발송, 메신저 연동, 임직원 검색, 코드 실행(Python·Node.js) 등 <strong>실제 결과물을 즉시 만들어 주는 것</strong>이 핵심입니다.</td></tr>
+          <tr><td>SEMCo-Work(샘코워크)</td><td>전체 적용. 삼성전기 자체개발 AI모델을 적용한 고유 플랫폼 및 서비스.</td></tr>
           <tr><td>PIMS(핌스)</td><td>8번 슬라이드. 사내 시스템 명칭(일정관리) — 모듈2 MCP 연결 실습.</td></tr>
           <tr><td>AEGIS(이지스)</td><td>20번 슬라이드. 사내 보안 체계 명칭.</td></tr>
           <tr><td>PADO(파도)</td><td>22번 슬라이드. 기존 보안 플랫폼 명칭.</td></tr>
@@ -213,66 +220,71 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       <p><strong>SEMCo-Work</strong>는 삼성전기 자체개발 AI모델을 적용한 고유 플랫폼 및 서비스입니다. 클로드 코워크(Claude Cowork) 환경과 유사하며, PC의 파일·폴더를 직접 읽기·쓰기·이동·복사·삭제·변환할 수 있고, 다양한 전문 스킬(Agent)을 호출해 반복 작업을 자동화합니다. 일반 챗봇처럼 텍스트로만 답하는 것이 아니라, 문서(Word·Excel·PPT·PDF) 자동 생성, 웹 검색, 이메일 발송, 메신저 연동, 임직원 검색, 코드 실행(Python·Node.js) 등 <strong>실제 결과물을 즉시 만들어 주는 것</strong>이 핵심입니다.</p>
       <ul>
         <li><strong>교육 대상</strong> — 전 사원 대상 약 7,500명(이 중 절반은 SEMco-Work 경험자). 전사원 대상 교육이므로 교육생 사전정보는 제공하지 않는 <strong>제로베이스</strong> 진행이 원칙.</li>
-        <li><strong>임직원 평균 수준 참고 사항</strong> — 총 5단계 레벨 중 평균 2레벨(문서 작성 및 채팅을 활용한 도움을 얻는 수준)에 해당합니다. 매 사업장 초반 강의는 AI 관련부서 및 숙련자들이 배정되었으며, 후순위 차수는 AI 사용도가 낮거나 거의 없는 교육생들이 배정됩니다. 세부 기준은 아래 점수별 역량수준 표를 참고해 주세요.</li>
+        <li><strong>임직원 평균 수준 참고 사항</strong> — 총 5단계 레벨 중 평균 2레벨(문서 작성 및 채팅을 활용한 도움을 얻는 수준)에 해당합니다. 매 사업장 초반 강의는 AI 관련부서 및 숙련자들이 배정되었으며, 후순위 차수는 AI 사용도가 낮거나 거의 없는 교육생들이 배정됩니다.
+          <details class="acc">
+            <summary>사내진단 기반 역량 정의 <span class="tag tag-note">참고</span></summary>
+            <div class="acc-body">
+              <table class="site-table">
+                <thead><tr><th>점수 구간</th><th>역량 수준</th><th>안내 메시지</th></tr></thead>
+                <tbody>
+                  <tr>
+                    <td>0 ~ 29점</td>
+                    <td>🥚 AI 병아리</td>
+                    <td>
+                      <strong>"AI 세상에 첫 발을 내딛은 AI 병아리!"</strong><br>
+                      아직은 AI라는 단어가 낯설고 어색하게 느껴지실 수 있어요. 하지만 걱정이 가장 쓸데없는 법입니다.<br>
+                      SEMAcademy에서 AI리터러시 및 SEMCo-Work 1단계 과정 학습을 시작해보아요.<br>
+                      당신만의 든든한 AI 비서가 생기는 마법이 시작될 거예요. 부담 없이 시작해 보세요!
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>30 ~ 69점 <span class="tag tag-must">평균 수준(26.08 기준)</span></td>
+                    <td>🌱 AI 새싹</td>
+                    <td>
+                      <strong>"반짝이는 호기심으로 고개를 쏙 내민, AI 새싹!"</strong><br>
+                      생성형 AI라는 새로운 기술을 따라가고, 이미 업무 메일 초안 작성이나 맞춤법 검사, 기사 요약 등 실생활에 유용하게 활용하고 제시하는군요! 대단합니다.<br>
+                      새로운 도구를 내 업무에 직접 써서 입력해 보고, 단답식이라도 비서처럼 부려본 경험 자체가 AI 세상을 향하는 가장 소중하고 위대한 첫걸음을 내신 거예요. 이런 거대한 나무도 처음에는 작은 새싹에서 시작하는 법이니까요.<br>
+                      앞으로 진행될 SEMCo-Work 교육을 기대해주세요!
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>60 ~ 79점</td>
+                    <td>🌳 AI 꿈나무</td>
+                    <td>
+                      <strong>"이미 단단한 뿌리를 세우고 무럭무럭 자라나는, 든든한 AI 꿈나무!"</strong><br>
+                      아이디어 브레인스토밍, 시장 조사 요약, 데이터 기초 분석까지! 이미 본인 업무의 중요한 파트에 AI를 적극적으로 도입해 똑똑하게 활용하고 제시하는군요. 정말 멋있어요!<br>
+                      업무 효율이 올라가는 소리가 여기까지 들리는 것 같아요.<br>
+                      SEMCo-Work를 활용하여 업무 생산성 향상에 도전해보세요!
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>80 ~ 90점</td>
+                    <td>⭐ AI 전문가</td>
+                    <td>
+                      <strong>"탁월한 역량으로 업무의 판도를 바꾸는, 진정한 AI 전문가!"</strong><br>
+                      당신은 단순히 AI를 잘 쓰는 수준을 넘어, 사내 AI 시스템과 노코드(No-code) 툴을 자유자재로 조합해 매일 반복되는 업무를 자동화 시스템으로 뚝딱 만들어버리는 놀라운 경지에 오르셨군요!<br>
+                      자신만의 정교한 워크플로우를 구축해 확보된 업무 시간을 유의미하게 만드신 당신은, 기술을 다루는 방식을 통해 완전히 새로운 스마트 워커이십니다.<br>
+                      직접 구축해 온 훌륭한 자동화 워크플로우나 핵심 프롬프트 노하우를 팀원들과 널리 공유(Share)해 보세요!
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>91 ~ 100점</td>
+                    <td>👑 AI 마스터</td>
+                    <td>
+                      <strong>"기업의 미래를 이끄는, 사내 최고의 AI 마스터!"</strong><br>
+                      당신은 단순히 개인의 업무 시간을 줄이는 차원을 완전히 초월하셨군요. AI를 활용해 새로운 비즈니스 모델을 제안하거나, 전사 차원의 시스템 자동화를 직접 구현하여 우리 기업의 비용 절감과 매출 증대에 결정적인 기여를 하고 제시하는 진정한 게임 체인저(Game Changer)이십니다.<br>
+                      비즈니스 혁신 사례와 자동화 아키텍처를 바탕으로 사내 AI꿈나무의 멘토이자 기술 전략가로 활약해 주세요!
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <p style="font-size:13px;color:var(--muted);margin-top:-6px;">※ SEMCo-Work 사전진단 점수 기준 역량수준 참고자료입니다(2026.08 기준 평균 30~69점 구간). 강의 중 교육생 수준을 가늠하는 참고용으로만 활용해 주세요.</p>
+            </div>
+          </details>
+        </li>
         <li><strong>실습 환경/기능 구성</strong> — SEMco-Work의 스킬(기본 세팅) → 플러그인(기능 설명) → 에이전트(직접 생성 실습) → MCP(외부 연동) 순으로 구성되며, 모듈 2(대시보드 제작 등 실습) → 모듈 3(외부 스킬·MCP 활용) → 모듈 4(스킬 조합·통합 프로젝트) 순으로 심화.</li>
         <li><strong>오리엔테이션 안내 내용</strong>(고객사 교육담당자 진행) — 교육 환경 및 제약사항, 일부 학습자에게는 난이도가 쉬울 수 있다는 점, 향후 심화과정 검토 가능성, 만족도 조사 시 추가 교육 요구사항 작성 요청, 교육 개선에 의견을 반영할 예정임을 안내.</li>
       </ul>
-      <p style="font-weight:700;font-size:14.5px;margin:20px 0 6px;">📋 점수별 역량수준 안내 <span class="tag tag-note">주강사 참고</span></p>
-      <table class="site-table">
-        <thead><tr><th>점수 구간</th><th>역량 수준</th><th>안내 메시지</th></tr></thead>
-        <tbody>
-          <tr>
-            <td>0 ~ 29점</td>
-            <td>🥚 AI 병아리</td>
-            <td>
-              <strong>"AI 세상에 첫 발을 내딛은 AI 병아리!"</strong><br>
-              아직은 AI라는 단어가 낯설고 어색하게 느껴지실 수 있어요. 하지만 걱정이 가장 쓸데없는 법입니다.<br>
-              SEMAcademy에서 AI리터러시 및 SEMCo-Work 1단계 과정 학습을 시작해보아요.<br>
-              당신만의 든든한 AI 비서가 생기는 마법이 시작될 거예요. 부담 없이 시작해 보세요!
-            </td>
-          </tr>
-          <tr>
-            <td>30 ~ 69점 <span class="tag tag-must">평균 수준(26.08 기준)</span></td>
-            <td>🌱 AI 새싹</td>
-            <td>
-              <strong>"반짝이는 호기심으로 고개를 쏙 내민, AI 새싹!"</strong><br>
-              생성형 AI라는 새로운 기술을 따라가고, 이미 업무 메일 초안 작성이나 맞춤법 검사, 기사 요약 등 실생활에 유용하게 활용하고 제시하는군요! 대단합니다.<br>
-              새로운 도구를 내 업무에 직접 써서 입력해 보고, 단답식이라도 비서처럼 부려본 경험 자체가 AI 세상을 향하는 가장 소중하고 위대한 첫걸음을 내신 거예요. 이런 거대한 나무도 처음에는 작은 새싹에서 시작하는 법이니까요.<br>
-              앞으로 진행될 SEMCo-Work 교육을 기대해주세요!
-            </td>
-          </tr>
-          <tr>
-            <td>60 ~ 79점</td>
-            <td>🌳 AI 잎나무</td>
-            <td>
-              <strong>"이미 단단한 뿌리를 세우고 무럭무럭 자라나는, 든든한 AI 잎나무!"</strong><br>
-              아이디어 브레인스토밍, 시장 조사 요약, 데이터 기초 분석까지! 이미 본인 업무의 중요한 파트에 AI를 적극적으로 도입해 똑똑하게 활용하고 제시하는군요. 정말 멋있어요!<br>
-              업무 효율이 올라가는 소리가 여기까지 들리는 것 같아요.<br>
-              SEMCo-Work를 활용하여 업무 생산성 향상에 도전해보세요!
-            </td>
-          </tr>
-          <tr>
-            <td>80 ~ 90점</td>
-            <td>⭐ AI 전문가</td>
-            <td>
-              <strong>"탁월한 역량으로 업무의 판도를 바꾸는, 진정한 AI 전문가!"</strong><br>
-              당신은 단순히 AI를 잘 쓰는 수준을 넘어, 사내 AI 시스템과 노코드(No-code) 툴을 자유자재로 조합해 매일 반복되는 업무를 자동화 시스템으로 뚝딱 만들어버리는 놀라운 경지에 오르셨군요!<br>
-              자신만의 정교한 워크플로우를 구축해 확보된 업무 시간을 유의미하게 만드신 당신은, 기술을 다루는 방식을 통해 완전히 새로운 스마트 워커이십니다.<br>
-              직접 구축해 온 훌륭한 자동화 워크플로우나 핵심 프롬프트 노하우를 팀원들과 널리 공유(Share)해 보세요!
-            </td>
-          </tr>
-          <tr>
-            <td>91 ~ 100점</td>
-            <td>👑 AI 마스터</td>
-            <td>
-              <strong>"기업의 미래를 이끄는, 사내 최고의 AI 마스터!"</strong><br>
-              당신은 단순히 개인의 업무 시간을 줄이는 차원을 완전히 초월하셨군요. AI를 활용해 새로운 비즈니스 모델을 제안하거나, 전사 차원의 시스템 자동화를 직접 구현하여 우리 기업의 비용 절감과 매출 증대에 결정적인 기여를 하고 제시하는 진정한 게임 체인저(Game Changer)이십니다.<br>
-              비즈니스 혁신 사례와 자동화 아키텍처를 바탕으로 사내 AI잎나무의 멘토이자 기술 전략가로 활약해 주세요!
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <p style="font-size:13px;color:var(--muted);margin-top:-6px;">※ SEMCo-Work 사전진단 점수 기준 역량수준 참고자료입니다(2026.08 기준 평균 30~69점 구간). 강의 중 교육생 수준을 가늠하는 참고용으로만 활용해 주세요.</p>
     </div>
 
     <div class="subsec" id="s1-3">
@@ -720,7 +732,7 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
         <li><strong>준비물</strong>
           <ul>
             <li>최신 버전 교안(PPT) — 교안은 계속 수정될 예정이므로 강의 직전 항상 최신본 여부 확인.</li>
-            <li>SEMCo-Work 계정 — 강사와 교육생 모두 공통 계정을 사용합니다. 계정은 운영자(보조강사)가 관리하며 <strong>교육생에게 공유하지 않습니다</strong>.</li>
+            <li>SEMCo-Work 계정 — 강사와 교육생 모두 공통 계정을 사용합니다. 계정은 고객사 운영자와 보조강사가 관리하며 <strong>교육생에게 공유하지 않습니다</strong>.</li>
             <li>전체 서버 장애 대비용 사전 녹화 시연영상(고객사 제공 예정).</li>
             <li>마이크·노트북 등 현장 장비(세부 점검 항목은 1.5 참고).</li>
           </ul>
@@ -736,7 +748,7 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       <table class="site-table">
         <thead><tr><th>용어</th><th>비고</th></tr></thead>
         <tbody>
-          <tr><td>SEMCo-Work(샘코워크)</td><td>전체 적용. <strong>삼성전기 자체개발 AI모델을 적용한 고유 플랫폼 및 서비스, SEMCo-Work 사용 교육입니다.</strong> 클로드 코워크 환경과 유사하며, PC의 파일·폴더를 직접 읽기·쓰기·이동·복사·삭제·변환할 수 있고, 다양한 전문 스킬(Agent)을 호출해 반복 작업을 자동화합니다. 일반 챗봇처럼 텍스트로만 답하는 것이 아니라, 문서(Word·Excel·PPT·PDF) 자동 생성, 웹 검색, 이메일 발송, 메신저 연동, 임직원 검색, 코드 실행(Python·Node.js) 등 <strong>실제 결과물을 즉시 만들어 주는 것</strong>이 핵심입니다.</td></tr>
+          <tr><td>SEMCo-Work(샘코워크)</td><td>전체 적용. 삼성전기 자체개발 AI모델을 적용한 고유 플랫폼 및 서비스.</td></tr>
           <tr><td>PIMS(핌스)</td><td>8번 슬라이드. 사내 시스템 명칭(일정관리) — 모듈2 MCP 연결 실습.</td></tr>
           <tr><td>AEGIS(이지스)</td><td>20번 슬라이드. 사내 보안 체계 명칭.</td></tr>
           <tr><td>PADO(파도)</td><td>22번 슬라이드. 기존 보안 플랫폼 명칭.</td></tr>
