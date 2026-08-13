@@ -52,7 +52,7 @@
 
     (async function load() {
       try {
-        const res = await fetch('/.netlify/functions/content', { credentials: 'include' });
+        const res = await fetch('/.netlify/functions/content', { credentials: 'include', cache: 'no-store' });
         if (res.status === 401) {
           window.location.href = '/index.html';
           return;
