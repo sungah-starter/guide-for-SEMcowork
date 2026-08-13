@@ -70,6 +70,70 @@ nav.toc ul ul a{font-weight:400;font-size:13.5px;color:var(--ink-soft);}
 .subsec ul ul{margin:6px 0 0;}
 .subsec ul ul li{padding-left:18px;}
 .subsec ul ul li::before{width:5px;height:5px;background:var(--muted);}
+.subsec ol.steps{counter-reset:stepnum;}
+.subsec ol.steps li{padding-left:32px;}
+.subsec ol.steps li::before{counter-increment:stepnum;content:counter(stepnum);
+  position:absolute;left:0;top:-1px;width:21px;height:21px;border-radius:50%;
+  background:var(--ink);color:#fff;font-size:11.5px;font-weight:700;font-variant-numeric:tabular-nums;
+  display:flex;align-items:center;justify-content:center;}
+.tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.05em;
+  padding:2px 9px;border-radius:999px;vertical-align:middle;white-space:nowrap;}
+.tag-must{background:var(--ink);color:#fff;}
+.tag-note{background:#fff;color:var(--muted);border:1px solid var(--line);}
+.subsec.pri-must{background:rgba(17,17,17,.035);border-radius:0 10px 10px 0;
+  padding-top:14px;padding-right:20px;padding-bottom:6px;}
+@media (max-width:560px){.subsec.pri-must{padding-right:14px;}}
+.acc-item{border:1px solid var(--line);border-radius:10px;margin:0 0 10px;overflow:hidden;}
+.acc-item + .acc-item{margin-top:10px;}
+.acc-item summary{cursor:pointer;list-style:none;padding:12px 16px;font-weight:700;font-size:14.5px;
+  display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--soft);}
+.acc-item summary::-webkit-details-marker{display:none;}
+.acc-item summary .acc-meta{font-weight:400;font-size:12.5px;color:var(--muted);flex:1;}
+.acc-item summary::after{content:"+ 펼치기";font-weight:400;font-size:12px;color:var(--muted);flex:0 0 auto;}
+.acc-item[open] summary::after{content:"– 접기";}
+.acc-item .acc-body{padding:14px 18px 16px;border-top:1px solid var(--line);}
+.acc-body .field{margin:0 0 9px;font-size:14px;color:var(--ink-soft);}
+.acc-body .field:last-child{margin-bottom:0;}
+.acc-body .field b{color:var(--ink);font-weight:700;display:inline-block;min-width:96px;}
+@media print{.acc-item{border:1px solid var(--line);}
+  .acc-item:not([open]) .acc-body{display:block !important;}
+  .acc-item summary::after{display:none;}}
+.flow{display:flex;align-items:stretch;flex-wrap:wrap;gap:0;margin:14px 0 16px;}
+.flow-step{flex:1 1 150px;background:var(--soft);border:1px solid var(--line);border-radius:10px;
+  padding:16px 14px;text-align:center;}
+.flow-step .fnum{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;
+  border-radius:50%;background:var(--ink);color:#fff;font-weight:700;font-size:13px;margin-bottom:8px;
+  font-variant-numeric:tabular-nums;}
+.flow-step .ftitle{font-weight:700;font-size:13.5px;margin-bottom:4px;color:var(--ink);}
+.flow-step .fdesc{font-size:12px;color:var(--muted);line-height:1.5;}
+.flow-arrow{flex:0 0 auto;display:flex;align-items:center;justify-content:center;
+  color:var(--muted);font-size:18px;padding:0 6px;}
+@media (max-width:700px){.flow{flex-direction:column;}
+  .flow-arrow{transform:rotate(90deg);padding:2px 0;align-self:center;}}
+.role-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:10px 0 16px;}
+@media (max-width:560px){.role-cards{grid-template-columns:1fr;}}
+.role-card{border:1px solid var(--line);border-radius:10px;padding:14px 16px;}
+.role-card h4{margin:0 0 8px;font-size:14px;font-weight:800;color:var(--ink);}
+.role-card ul{margin:0;padding:0;list-style:none;}
+.role-card li{position:relative;padding-left:16px;margin-bottom:6px;font-size:13px;color:var(--ink-soft);}
+.role-card li::before{content:"–";position:absolute;left:0;color:var(--muted);}
+.dodont{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:10px 0 16px;}
+@media (max-width:560px){.dodont{grid-template-columns:1fr;}}
+.dodont .col{border-radius:10px;overflow:hidden;border:1px solid var(--line);}
+.dodont .col h4{margin:0;padding:10px 14px;font-size:13.5px;font-weight:700;color:#fff;
+  -webkit-print-color-adjust:exact;print-color-adjust:exact;}
+.dodont .do h4{background:#2f6f4f;}
+.dodont .dont h4{background:#a83232;}
+.dodont ul{margin:0;padding:12px 14px;list-style:none;}
+.dodont li{position:relative;padding-left:16px;margin-bottom:7px;font-size:13.5px;color:var(--ink-soft);}
+.dodont li::before{content:"–";position:absolute;left:0;color:var(--muted);}
+.check-table{width:100%;border-collapse:collapse;margin:6px 0 16px;font-size:13.5px;}
+.check-table th,.check-table td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;}
+.check-table thead th{border-bottom:2px solid var(--ink);font-size:11px;text-transform:uppercase;
+  letter-spacing:.05em;color:var(--muted);font-weight:700;}
+.check-table td.cat{font-weight:700;color:var(--ink);white-space:nowrap;}
+.check-table td.chk{width:36px;text-align:center;}
+.check-table td.chk .box{display:inline-block;width:15px;height:15px;border:1.5px solid var(--ink);border-radius:3px;}
 .script{
   margin:0 0 14px;padding:14px 18px;background:var(--soft);
   border-left:3px solid var(--ink);border-radius:0 6px 6px 0;color:var(--ink);
@@ -136,6 +200,7 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
           <li><a href="#s1-8">1.8 생활 안내</a></li>
           <li><a href="#s1-9">1.9 비상 연락망</a></li>
           <li><a href="#s1-10">1.10 차수별 특이사항 기록</a></li>
+          <li><a href="#s1-11">1.11 강의 품위 유지 (Do &amp; Don't)</a></li>
         </ul>
       </li>
       <li><a href="#s2">2. [주강사] 4시간 표준 강의 가이드</a>
@@ -152,6 +217,11 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
     </ul>
   </nav>
 
+  <p style="font-size:12.5px;color:var(--muted);margin:14px 0 0;">
+    <span class="tag tag-must">필수</span>&nbsp;반드시 지키고 숙지해야 하는 사항&nbsp;&nbsp;·&nbsp;&nbsp;
+    <span class="tag tag-note">참고</span>&nbsp;알아두면 도움이 되는 배경 정보
+  </p>
+
   <!-- SECTION 1 -->
   <section class="sec" id="s1">
     <div class="sec-head">
@@ -160,8 +230,8 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
     </div>
     <p class="sec-desc">모든 강사진이 현장에 도착해서 실습 시작 전까지 세팅하고 숙지해야 할 기본 내용입니다.</p>
 
-    <div class="subsec" id="s1-1">
-      <h3><span class="subnum">1.1</span> 준비물 &amp; 과업 &amp; 용어정리</h3>
+    <div class="subsec pri-must" id="s1-1">
+      <h3><span class="subnum">1.1</span> 준비물 &amp; 과업 &amp; 용어정리 <span class="tag tag-must">필수</span></h3>
       <ul>
         <li><strong>준비물</strong>
           <ul>
@@ -171,14 +241,27 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
             <li>마이크·노트북 등 현장 장비(세부 점검 항목은 1.5 참고).</li>
           </ul>
         </li>
-        <li><strong>과업(역할 정의)</strong>
-          <ul>
-            <li><strong>주강사</strong> — 교육 품질과 실습 진행을 총괄.</li>
-            <li><strong>보조강사</strong> — 교육 당일 환경 안정성과 장애 대응을 총괄.</li>
-          </ul>
-        </li>
         <li><strong>용어정리</strong> — 고객사 주요 용어는 강의 중 자연스럽게 사용할 수 있도록 기억해 주세요.</li>
       </ul>
+      <p style="margin:14px 0 6px;font-size:13.5px;font-weight:700;color:var(--ink);">과업(역할 정의)</p>
+      <div class="role-cards">
+        <div class="role-card">
+          <h4>주강사</h4>
+          <ul>
+            <li>교육 품질과 실습 진행 총괄</li>
+            <li>정규 강의 진행 및 시간 준수</li>
+            <li>과제 안내 및 수료 조건 고지</li>
+          </ul>
+        </div>
+        <div class="role-card">
+          <h4>보조강사</h4>
+          <ul>
+            <li>교육 당일 환경 안정성과 장애 대응 총괄</li>
+            <li>로그인·접속 오류 1차 대응</li>
+            <li>실습 지원 및 진도 이탈 교육생 케어</li>
+          </ul>
+        </div>
+      </div>
       <table class="site-table">
         <thead><tr><th>용어</th><th>비고</th></tr></thead>
         <tbody>
@@ -193,8 +276,8 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       </table>
     </div>
 
-    <div class="subsec" id="s1-2">
-      <h3><span class="subnum">1.2</span> 교육 소개</h3>
+    <div class="subsec pri-note" id="s1-2">
+      <h3><span class="subnum">1.2</span> 교육 소개 <span class="tag tag-note">참고</span></h3>
       <ul>
         <li><strong>교육 대상</strong> — 전 사원 대상 약 7,500명(이 중 절반은 SEMco-Work 경험자). 전사원 대상 교육이므로 교육생 사전정보는 제공하지 않는 <strong>제로베이스</strong> 진행이 원칙.</li>
         <li><strong>임직원 평균 수준 참고 사항</strong> — 총 5단계 레벨 중 평균 2레벨(문서 작성 및 채팅을 활용한 도움을 얻는 수준)에 해당합니다. 매 사업장 초반 강의는 AI 관련부서 및 숙련자들이 배정되었으며, 후순위 차수는 AI 사용도가 낮거나 거의 없는 교육생들이 배정됩니다.</li>
@@ -203,8 +286,8 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       </ul>
     </div>
 
-    <div class="subsec" id="s1-3">
-      <h3><span class="subnum">1.3</span> 출석 및 강의시간 안내</h3>
+    <div class="subsec pri-must" id="s1-3">
+      <h3><span class="subnum">1.3</span> 출석 및 강의시간 안내 <span class="tag tag-must">필수</span></h3>
       <ul>
         <li>표준 강의시간은 <strong>4시간</strong>(세부 시간 배분은 2.2 참고). 일찍 끝내거나 늦게 끝내지 않는 <strong>정시 운영</strong>을 준수합니다.</li>
         <li>수료 조건에는 <strong>과제 제출</strong>이 필수입니다. 꼭 안내해 주세요(과제 안내는 2.6 참고).</li>
@@ -213,8 +296,8 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       <div class="gap"><span class="glabel">확인 필요</span>지각·조퇴 처리 기준은 아직 업데이트 필요.</div>
     </div>
 
-    <div class="subsec" id="s1-4">
-      <h3><span class="subnum">1.4</span> 학습이해도 기록 안내</h3>
+    <div class="subsec pri-note" id="s1-4">
+      <h3><span class="subnum">1.4</span> 학습이해도 기록 안내 <span class="tag tag-note">참고</span></h3>
       <ul>
         <li>실습 중 진도 이탈, 반복적인 오류, 이해도 편차 등 <strong>특이사항이 발견되면 기록</strong>해 두고, 교육 종료 후 운영진과 공유.</li>
         <li>사전진단 결과(평균 2~3레벨)를 기준으로 실제 학습 난이도 체감 차이를 관찰해 강의 개선에 참고.</li>
@@ -223,8 +306,8 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       <div class="gap"><span class="glabel">확인 필요</span>특이사항 기록 양식 및 공유 채널(운영진 보고 방법)은 아직 확정 전이므로, 정해지는 대로 반영 예정.</div>
     </div>
 
-    <div class="subsec" id="s1-5">
-      <h3><span class="subnum">1.5</span> 교육장 환경 체크</h3>
+    <div class="subsec pri-must" id="s1-5">
+      <h3><span class="subnum">1.5</span> 교육장 환경 체크 <span class="tag tag-must">필수</span></h3>
       <ul>
         <li><strong>도착 시간</strong> — 강사는 오전 7시 30분 이전 강의장 도착.</li>
         <li><strong>출입 방법</strong> — 강의장 출입 비밀번호 <strong>"8203"</strong>(수원 드림플라자 203호 기준). <strong>타 사업장 출입 방식은 업데이트 필요</strong>.</li>
@@ -250,8 +333,8 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       </ul>
     </div>
 
-    <div class="subsec" id="s1-6">
-      <h3><span class="subnum">1.6</span> 사내 AI 시스템 접속 준비</h3>
+    <div class="subsec pri-must" id="s1-6">
+      <h3><span class="subnum">1.6</span> 사내 AI 시스템 접속 준비 <span class="tag tag-must">필수</span></h3>
       <ul>
         <li><strong>계정 체계</strong> — 강사는 공통 계정 1개를 사용(학습자도 동일한 교육용 계정 사용). 백단에서 IP 기준으로 접속을 구분하므로 동시 접속이 가능.</li>
       </ul>
@@ -268,8 +351,8 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       </ul>
     </div>
 
-    <div class="subsec" id="s1-7">
-      <h3><span class="subnum">1.7</span> 보안 주의 사항</h3>
+    <div class="subsec pri-must" id="s1-7">
+      <h3><span class="subnum">1.7</span> 보안 주의 사항 <span class="tag tag-must">필수</span></h3>
       <div class="gap"><span class="glabel">확인 필요</span>실습 시 입력 금지 대상이 되는 사내 민감정보의 세부 기준 및 화면 공유 시 유의사항은 아직 세부 확정 전입니다. 확정 전까지는 아래 원칙으로 안내해 주세요.</div>
       <ul>
         <li>실습은 교육용 계정과 <strong>예시 데이터로만</strong> 진행하고, 실제 사내 문서나 개인정보·기밀정보는 입력하지 않도록 안내.</li>
@@ -279,8 +362,8 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       </ul>
     </div>
 
-    <div class="subsec" id="s1-8">
-      <h3><span class="subnum">1.8</span> 생활 안내</h3>
+    <div class="subsec pri-note" id="s1-8">
+      <h3><span class="subnum">1.8</span> 생활 안내 <span class="tag tag-note">참고</span></h3>
       <div class="gap"><span class="glabel">확인 필요</span>세종·부산 사업장의 흡연장소는 아직 명시되어 있지 않습니다. 사업장별 운영담당자에게 확인해 아래 표를 채워 주세요.</div>
       <table class="site-table">
         <thead><tr><th>사업장</th><th>흡연장소</th><th>식당·편의시설</th><th>내방(방문) 신청</th></tr></thead>
@@ -292,8 +375,8 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       </table>
     </div>
 
-    <div class="subsec" id="s1-9">
-      <h3><span class="subnum">1.9</span> 비상 연락망</h3>
+    <div class="subsec pri-must" id="s1-9">
+      <h3><span class="subnum">1.9</span> 비상 연락망 <span class="tag tag-must">필수</span></h3>
       <table class="site-table">
         <thead><tr><th>사업장</th><th>담당자</th><th>이메일</th></tr></thead>
         <tbody>
@@ -310,19 +393,86 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       </ul>
     </div>
 
-    <div class="subsec" id="s1-10">
-      <h3><span class="subnum">1.10</span> 차수별 특이사항 기록</h3>
-      <p>교육 차수가 진행될 때마다 현장에서 발생한 특이사항·건의사항을 아래 표에 이어서 기록해 주세요. 행이 부족하면 자유롭게 추가하시면 됩니다.</p>
-      <table class="site-table">
-        <thead><tr><th>차수</th><th>일자</th><th>사업장</th><th>특이사항</th><th>조치·전달사항</th></tr></thead>
-        <tbody>
-          <tr><td>1차</td><td></td><td></td><td></td><td></td></tr>
-          <tr><td>2차</td><td></td><td></td><td></td><td></td></tr>
-          <tr><td>3차</td><td></td><td></td><td></td><td></td></tr>
-          <tr><td>4차</td><td></td><td></td><td></td><td></td></tr>
-          <tr><td>5차</td><td></td><td></td><td></td><td></td></tr>
-        </tbody>
-      </table>
+    <div class="subsec pri-note" id="s1-10">
+      <h3><span class="subnum">1.10</span> 차수별 특이사항 기록 <span class="tag tag-note">참고</span></h3>
+      <p>교육 차수가 진행될 때마다 현장에서 발생한 특이사항·건의사항을 아래 항목을 눌러 펼친 뒤 이어서 기록해 주세요. 차수가 부족하면 같은 형태로 항목을 복사해 추가하시면 됩니다.</p>
+
+      <details class="acc-item">
+        <summary>1차 <span class="acc-meta">일자 · 사업장 미기재</span></summary>
+        <div class="acc-body">
+          <div class="field"><b>일자</b></div>
+          <div class="field"><b>사업장</b></div>
+          <div class="field"><b>특이사항</b></div>
+          <div class="field"><b>조치·전달사항</b></div>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary>2차 <span class="acc-meta">일자 · 사업장 미기재</span></summary>
+        <div class="acc-body">
+          <div class="field"><b>일자</b></div>
+          <div class="field"><b>사업장</b></div>
+          <div class="field"><b>특이사항</b></div>
+          <div class="field"><b>조치·전달사항</b></div>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary>3차 <span class="acc-meta">일자 · 사업장 미기재</span></summary>
+        <div class="acc-body">
+          <div class="field"><b>일자</b></div>
+          <div class="field"><b>사업장</b></div>
+          <div class="field"><b>특이사항</b></div>
+          <div class="field"><b>조치·전달사항</b></div>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary>4차 <span class="acc-meta">일자 · 사업장 미기재</span></summary>
+        <div class="acc-body">
+          <div class="field"><b>일자</b></div>
+          <div class="field"><b>사업장</b></div>
+          <div class="field"><b>특이사항</b></div>
+          <div class="field"><b>조치·전달사항</b></div>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary>5차 <span class="acc-meta">일자 · 사업장 미기재</span></summary>
+        <div class="acc-body">
+          <div class="field"><b>일자</b></div>
+          <div class="field"><b>사업장</b></div>
+          <div class="field"><b>특이사항</b></div>
+          <div class="field"><b>조치·전달사항</b></div>
+        </div>
+      </details>
+    </div>
+
+    <div class="subsec pri-must" id="s1-11">
+      <h3><span class="subnum">1.11</span> 강의 품위 유지 (Do &amp; Don't) <span class="tag tag-must">필수</span></h3>
+      <p>모든 강사·보조강사가 동일한 기준으로 신뢰감 있게 교육을 진행할 수 있도록, 아래 사항을 지켜 주세요.</p>
+      <div class="dodont">
+        <div class="col do">
+          <h4>반드시 지켜야 할 사항 (Do)</h4>
+          <ul>
+            <li>단정하고 깔끔한 복장 착용</li>
+            <li>모든 교육생에게 존댓말 사용</li>
+            <li>바른 자세와 안정된 목소리 유지</li>
+            <li>교육생 질문에 성실하고 친절하게 응대</li>
+            <li>강의 시작·종료 시간 철저 준수</li>
+          </ul>
+        </div>
+        <div class="col dont">
+          <h4>절대 해서는 안 되는 행동 (Don't)</h4>
+          <ul>
+            <li>고객사·사내 시스템에 대한 개인적 의견·평가</li>
+            <li>정치·종교·성별 등 편향된 발언</li>
+            <li>비속어 및 부정적·단정적 표현</li>
+            <li>교육생을 비교·비하하는 언행</li>
+            <li>교육생 개인정보 수집·무단 공유 또는 개인적 연락</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -334,21 +484,25 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
     </div>
     <p class="sec-desc">강사 간 설명의 편차를 줄이고, 정해진 4시간의 시간표대로 교육을 이끌어가기 위한 지침입니다.</p>
 
-    <div class="subsec" id="s2-1">
-      <h3><span class="subnum">2.1</span> 강의 준비 순서</h3>
+    <div class="subsec pri-must" id="s2-1">
+      <h3><span class="subnum">2.1</span> 강의 준비 순서 <span class="tag tag-must">필수</span></h3>
       <p>고객사가 시연영상과 교안을 제공하며, 주강사는 이 자료에 맞춰 표준화된 내용으로 강의를 진행해야 합니다. 아래 순서대로 준비해 주세요.</p>
-      <ol class="steps">
-        <li><strong>시연 영상 시청</strong> — 고객사가 제공하는 실습 시연 영상을 먼저 끝까지 시청하며 진행 흐름을 파악.</li>
-        <li><strong>교안 비교 확인</strong> — 시연 영상과 최신 교안(PPT)을 나란히 비교해 순서·멘트·화면이 일치하는지 확인.</li>
-        <li><strong>제공 실습 스크립트 및 강사 전파교육 사항 숙지</strong> — 고객사가 제공한 실습 스크립트와 강사 전파교육 때 전달된 유의사항을 빠짐없이 숙지.</li>
-        <li><strong>사전 연습</strong> — 실제 진행 속도로 최소 1회 리허설.</li>
-        <li><strong>현장 출강</strong>.</li>
-      </ol>
+      <div class="flow">
+        <div class="flow-step"><span class="fnum">1</span><div class="ftitle">시연 영상 시청</div><div class="fdesc">고객사 제공 실습 시연 영상을 먼저 끝까지 시청하며 진행 흐름 파악</div></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><span class="fnum">2</span><div class="ftitle">교안 비교 확인</div><div class="fdesc">시연 영상과 최신 교안(PPT)을 나란히 비교해 순서·멘트·화면 일치 확인</div></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><span class="fnum">3</span><div class="ftitle">스크립트·전파교육 숙지</div><div class="fdesc">제공 실습 스크립트와 강사 전파교육 유의사항을 빠짐없이 숙지</div></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><span class="fnum">4</span><div class="ftitle">사전 연습</div><div class="fdesc">실제 진행 속도로 최소 1회 리허설</div></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><span class="fnum">5</span><div class="ftitle">현장 출강</div><div class="fdesc">준비 완료 후 현장 진행</div></div>
+      </div>
       <div class="gap"><span class="glabel">주의</span>실습 중 발생하는 대기·여유 시간은 자율적으로 운영하되, <strong>사례 공유 등 시스템 활용 사례처럼 너무 열려 있는 질문</strong>은 사내 시스템에 대한 직접 문의로 이어질 수 있으므로 지양해 주세요. 대신 <strong>AI 도구·발전·트렌드, 타사 활용 사례, 강사 본인의 활용 경험</strong> 중심으로 시간을 풀어가는 것을 권장합니다.</div>
     </div>
 
-    <div class="subsec" id="s2-2">
-      <h3><span class="subnum">2.2</span> 4시간 교육 시간표와 시간 배분</h3>
+    <div class="subsec pri-must" id="s2-2">
+      <h3><span class="subnum">2.2</span> 4시간 교육 시간표와 시간 배분 <span class="tag tag-must">필수</span></h3>
       <div class="gap"><span class="glabel">확인 필요</span>분 단위 확정 시간표는 최신 교안 확정 후 별도 배포됩니다. 아래는 회의에서 논의된 모듈별 소요시간을 기준으로 정리한 잠정 배분 가이드이니, 실제 진행 시 최신 교안 기준 시간표를 우선 적용해 주세요.</div>
       <ul>
         <li><strong>오리엔테이션</strong>(고객사 교육담당자 진행) — 세부 안내 내용은 <strong>1.2 교육 소개</strong> 참고.</li>
@@ -360,8 +514,8 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       </ul>
     </div>
 
-    <div class="subsec" id="s2-3">
-      <h3><span class="subnum">2.3</span> 교안(PPT) 핵심 설명 가이드</h3>
+    <div class="subsec pri-must" id="s2-3">
+      <h3><span class="subnum">2.3</span> 교안(PPT) 핵심 설명 가이드 <span class="tag tag-must">필수</span></h3>
       <ul>
         <li><strong>기본 원칙</strong> — 기본적으로 제공되는 표준 교안 흐름에 맞춰 진행하고, 강사 개인의 임의 확장이나 의견 추가는 지양.</li>
         <li>교안은 추가 수정될 예정이므로 항상 <strong>최신본</strong>을 기준으로 준비.</li>
@@ -378,8 +532,8 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       </ul>
     </div>
 
-    <div class="subsec" id="s2-4">
-      <h3><span class="subnum">2.4</span> 사내 시스템 시연 요령</h3>
+    <div class="subsec pri-must" id="s2-4">
+      <h3><span class="subnum">2.4</span> 사내 시스템 시연 요령 <span class="tag tag-must">필수</span></h3>
       <ul>
         <li><strong>화면 시연 순서</strong> — 스킬(기본 세팅 확인) → 플러그인(기능 설명 위주) → 에이전트(학습자가 직접 생성하는 간단 실습) → MCP.
           <ul><li>에이전트는 <strong>세션 생성 전에 먼저 만들어야</strong> 하므로, 관련 설명은 앞부분에서 먼저 진행.</li></ul>
@@ -396,8 +550,8 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       </ul>
     </div>
 
-    <div class="subsec" id="s2-5">
-      <h3><span class="subnum">2.5</span> 보조강사 활용 방법</h3>
+    <div class="subsec pri-note" id="s2-5">
+      <h3><span class="subnum">2.5</span> 보조강사 활용 방법 <span class="tag tag-note">참고</span></h3>
       <ul>
         <li>진도를 따라오지 못하는 교육생이 보이면 강의 흐름을 끊지 않고 <strong>즉시 보조강사에게 인계</strong>.</li>
         <li>특히 난이도가 높은 <strong>모듈 4</strong> 실습 구간에서는 보조강사의 적극적인 지원을 사전에 요청.</li>
@@ -406,13 +560,31 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       </ul>
     </div>
 
-    <div class="subsec" id="s2-6">
-      <h3><span class="subnum">2.6</span> 과제 안내</h3>
+    <div class="subsec pri-must" id="s2-6">
+      <h3><span class="subnum">2.6</span> 과제 안내 <span class="tag tag-must">필수</span></h3>
+      <p>과제 제출은 <strong>수료의 필수 조건</strong>입니다. 아래 내용을 교육생에게 명확히 안내해 주세요.</p>
+      <div class="script">
+        <span class="label">과제</span>
+        분야별 과제 선정 또는 본인이 만들고 싶은 Skill 中 택1 제작하여 제출
+      </div>
       <ul>
-        <li><strong>과제 제출은 수료의 필수 조건</strong>이므로, 강사가 수강생에게 과제 제출 방법을 명확하게 안내.</li>
-        <li>우수 학습자에게는 <strong>심화과정 입과, 후속 교육기회 제공</strong> 등의 메리트가 부여될 수 있음을 안내 가능.</li>
+        <li>예시 중 희망 과제를 선택하여 <strong>Skill 제작 후 개별 제출</strong>.</li>
+        <li>또는 자유롭게 <strong>웹페이지 제작 과제</strong>로 제출 가능.</li>
+        <li><strong>우수 과제 제출자</strong>에게는 심화교육 선발 인센티브가 부여됨을 안내.</li>
       </ul>
-      <div class="gap"><span class="glabel">확인 필요</span>과제의 구체적인 내용·제출 방법·마감기한·제출 확인 방식은 최신 교안 및 운영담당자 안내를 기준으로 확정되는 대로 반영 예정.</div>
+      <p style="margin:0 0 8px;font-size:14px;color:var(--ink-soft);"><strong>직무별 Skill 예시</strong> — 교육생이 본인 직무에 맞는 과제 아이디어를 떠올리기 어려워할 때 참고하도록 안내해 주세요.</p>
+      <table class="site-table">
+        <thead><tr><th>직무</th><th>Skill 예시</th></tr></thead>
+        <tbody>
+          <tr><td>영업기획</td><td>매출 정확도 개선</td></tr>
+          <tr><td>영업·마케팅</td><td>홍보 성과분석</td></tr>
+          <tr><td>재무·회계</td><td>재무분석 어시스턴트</td></tr>
+          <tr><td>인사·총무</td><td>설문조사 분석</td></tr>
+          <tr><td>연구개발</td><td>신제품 개발 제안</td></tr>
+          <tr><td>생산·품질</td><td>설비가동률 분석</td></tr>
+        </tbody>
+      </table>
+      <div class="gap"><span class="glabel">확인 필요</span>과제 <strong>제출 기한</strong>은 아직 확정되지 않았습니다. 확정되는 대로 반영 예정.</div>
     </div>
   </section>
 
@@ -423,24 +595,27 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       <h2>주강사 당일 체크리스트</h2>
     </div>
     <div class="subsec">
-      <ul class="checklist">
-        <li>오전 7시 30분 이전 강의장 도착</li>
-        <li>최신 교안 기준으로 강의 준비</li>
-        <li>검증·출처확인 프롬프트 적극 활용</li>
-        <li>실습 여유시간은 사례 및 경험담 중심으로 활용</li>
-        <li>외부 AI 확장 실습은 지양</li>
-        <li>자유 Q&amp;A 확대 운영은 최소화</li>
-        <li>모듈 2~3 동일 세션 활용</li>
-        <li>모듈 4 시작 시 반드시 새 세션 생성 안내</li>
-        <li>모듈 4 실습 시 학습자 지원 강화</li>
-        <li>원본 실습폴더 수정 금지 안내</li>
-        <li>개인폴더 복사 후 실습하도록 안내</li>
-        <li>실습 결과물 삭제 금지 안내</li>
-        <li>과제 제출이 수료 필수임을 안내</li>
-        <li>라이선스 갱신 관련 언급 금지</li>
-        <li>녹스 연동은 직접 실행보다 녹화 시연 중심으로 진행</li>
-        <li>사전진단 결과를 참고하여 강의 멘트와 난이도 조정</li>
-      </ul>
+      <table class="check-table">
+        <thead><tr><th style="width:36px;">No</th><th style="width:76px;">구분</th><th>체크리스트</th><th class="chk">체크</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td class="cat" rowspan="2">교육 전</td><td>오전 7시 30분 이전 강의장 도착</td><td class="chk"><span class="box"></span></td></tr>
+          <tr><td>2</td><td>최신 교안 기준으로 강의 준비</td><td class="chk"><span class="box"></span></td></tr>
+          <tr><td>3</td><td class="cat" rowspan="13">교육 중</td><td>검증·출처확인 프롬프트 적극 활용</td><td class="chk"><span class="box"></span></td></tr>
+          <tr><td>4</td><td>실습 여유시간은 사례 및 경험담 중심으로 활용</td><td class="chk"><span class="box"></span></td></tr>
+          <tr><td>5</td><td>외부 AI 확장 실습은 지양</td><td class="chk"><span class="box"></span></td></tr>
+          <tr><td>6</td><td>자유 Q&amp;A 확대 운영은 최소화</td><td class="chk"><span class="box"></span></td></tr>
+          <tr><td>7</td><td>모듈 2~3 동일 세션 활용</td><td class="chk"><span class="box"></span></td></tr>
+          <tr><td>8</td><td>모듈 4 시작 시 반드시 새 세션 생성 안내</td><td class="chk"><span class="box"></span></td></tr>
+          <tr><td>9</td><td>모듈 4 실습 시 학습자 지원 강화</td><td class="chk"><span class="box"></span></td></tr>
+          <tr><td>10</td><td>원본 실습폴더 수정 금지 안내</td><td class="chk"><span class="box"></span></td></tr>
+          <tr><td>11</td><td>개인폴더 복사 후 실습하도록 안내</td><td class="chk"><span class="box"></span></td></tr>
+          <tr><td>12</td><td>실습 결과물 삭제 금지 안내</td><td class="chk"><span class="box"></span></td></tr>
+          <tr><td>13</td><td>라이선스 갱신 관련 언급 금지</td><td class="chk"><span class="box"></span></td></tr>
+          <tr><td>14</td><td>녹스 연동은 직접 실행보다 녹화 시연 중심으로 진행</td><td class="chk"><span class="box"></span></td></tr>
+          <tr><td>15</td><td>사전진단 결과를 참고하여 강의 멘트와 난이도 조정</td><td class="chk"><span class="box"></span></td></tr>
+          <tr><td>16</td><td class="cat">교육 후</td><td>과제 제출이 수료 필수임을 안내</td><td class="chk"><span class="box"></span></td></tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
@@ -525,6 +700,70 @@ nav.toc ul ul a{font-weight:400;font-size:13.5px;color:var(--ink-soft);}
 .subsec ul ul{margin:6px 0 0;}
 .subsec ul ul li{padding-left:18px;}
 .subsec ul ul li::before{width:5px;height:5px;background:var(--muted);}
+.subsec ol.steps{counter-reset:stepnum;}
+.subsec ol.steps li{padding-left:32px;}
+.subsec ol.steps li::before{counter-increment:stepnum;content:counter(stepnum);
+  position:absolute;left:0;top:-1px;width:21px;height:21px;border-radius:50%;
+  background:var(--ink);color:#fff;font-size:11.5px;font-weight:700;font-variant-numeric:tabular-nums;
+  display:flex;align-items:center;justify-content:center;}
+.tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.05em;
+  padding:2px 9px;border-radius:999px;vertical-align:middle;white-space:nowrap;}
+.tag-must{background:var(--ink);color:#fff;}
+.tag-note{background:#fff;color:var(--muted);border:1px solid var(--line);}
+.subsec.pri-must{background:rgba(17,17,17,.035);border-radius:0 10px 10px 0;
+  padding-top:14px;padding-right:20px;padding-bottom:6px;}
+@media (max-width:560px){.subsec.pri-must{padding-right:14px;}}
+.acc-item{border:1px solid var(--line);border-radius:10px;margin:0 0 10px;overflow:hidden;}
+.acc-item + .acc-item{margin-top:10px;}
+.acc-item summary{cursor:pointer;list-style:none;padding:12px 16px;font-weight:700;font-size:14.5px;
+  display:flex;align-items:center;justify-content:space-between;gap:10px;background:var(--soft);}
+.acc-item summary::-webkit-details-marker{display:none;}
+.acc-item summary .acc-meta{font-weight:400;font-size:12.5px;color:var(--muted);flex:1;}
+.acc-item summary::after{content:"+ 펼치기";font-weight:400;font-size:12px;color:var(--muted);flex:0 0 auto;}
+.acc-item[open] summary::after{content:"– 접기";}
+.acc-item .acc-body{padding:14px 18px 16px;border-top:1px solid var(--line);}
+.acc-body .field{margin:0 0 9px;font-size:14px;color:var(--ink-soft);}
+.acc-body .field:last-child{margin-bottom:0;}
+.acc-body .field b{color:var(--ink);font-weight:700;display:inline-block;min-width:96px;}
+@media print{.acc-item{border:1px solid var(--line);}
+  .acc-item:not([open]) .acc-body{display:block !important;}
+  .acc-item summary::after{display:none;}}
+.flow{display:flex;align-items:stretch;flex-wrap:wrap;gap:0;margin:14px 0 16px;}
+.flow-step{flex:1 1 150px;background:var(--soft);border:1px solid var(--line);border-radius:10px;
+  padding:16px 14px;text-align:center;}
+.flow-step .fnum{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;
+  border-radius:50%;background:var(--ink);color:#fff;font-weight:700;font-size:13px;margin-bottom:8px;
+  font-variant-numeric:tabular-nums;}
+.flow-step .ftitle{font-weight:700;font-size:13.5px;margin-bottom:4px;color:var(--ink);}
+.flow-step .fdesc{font-size:12px;color:var(--muted);line-height:1.5;}
+.flow-arrow{flex:0 0 auto;display:flex;align-items:center;justify-content:center;
+  color:var(--muted);font-size:18px;padding:0 6px;}
+@media (max-width:700px){.flow{flex-direction:column;}
+  .flow-arrow{transform:rotate(90deg);padding:2px 0;align-self:center;}}
+.role-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:10px 0 16px;}
+@media (max-width:560px){.role-cards{grid-template-columns:1fr;}}
+.role-card{border:1px solid var(--line);border-radius:10px;padding:14px 16px;}
+.role-card h4{margin:0 0 8px;font-size:14px;font-weight:800;color:var(--ink);}
+.role-card ul{margin:0;padding:0;list-style:none;}
+.role-card li{position:relative;padding-left:16px;margin-bottom:6px;font-size:13px;color:var(--ink-soft);}
+.role-card li::before{content:"–";position:absolute;left:0;color:var(--muted);}
+.dodont{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:10px 0 16px;}
+@media (max-width:560px){.dodont{grid-template-columns:1fr;}}
+.dodont .col{border-radius:10px;overflow:hidden;border:1px solid var(--line);}
+.dodont .col h4{margin:0;padding:10px 14px;font-size:13.5px;font-weight:700;color:#fff;
+  -webkit-print-color-adjust:exact;print-color-adjust:exact;}
+.dodont .do h4{background:#2f6f4f;}
+.dodont .dont h4{background:#a83232;}
+.dodont ul{margin:0;padding:12px 14px;list-style:none;}
+.dodont li{position:relative;padding-left:16px;margin-bottom:7px;font-size:13.5px;color:var(--ink-soft);}
+.dodont li::before{content:"–";position:absolute;left:0;color:var(--muted);}
+.check-table{width:100%;border-collapse:collapse;margin:6px 0 16px;font-size:13.5px;}
+.check-table th,.check-table td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;}
+.check-table thead th{border-bottom:2px solid var(--ink);font-size:11px;text-transform:uppercase;
+  letter-spacing:.05em;color:var(--muted);font-weight:700;}
+.check-table td.cat{font-weight:700;color:var(--ink);white-space:nowrap;}
+.check-table td.chk{width:36px;text-align:center;}
+.check-table td.chk .box{display:inline-block;width:15px;height:15px;border:1.5px solid var(--ink);border-radius:3px;}
 .script{
   margin:0 0 14px;padding:14px 18px;background:var(--soft);
   border-left:3px solid var(--ink);border-radius:0 6px 6px 0;color:var(--ink);
@@ -591,6 +830,7 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
           <li><a href="#s1-8">1.8 생활 안내</a></li>
           <li><a href="#s1-9">1.9 비상 연락망</a></li>
           <li><a href="#s1-10">1.10 차수별 특이사항 기록</a></li>
+          <li><a href="#s1-11">1.11 강의 품위 유지 (Do &amp; Don't)</a></li>
         </ul>
       </li>
       <li><a href="#s3">3. [보조강사] 교육생 실습 지원 매뉴얼</a>
@@ -606,6 +846,11 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
     </ul>
   </nav>
 
+  <p style="font-size:12.5px;color:var(--muted);margin:14px 0 0;">
+    <span class="tag tag-must">필수</span>&nbsp;반드시 지키고 숙지해야 하는 사항&nbsp;&nbsp;·&nbsp;&nbsp;
+    <span class="tag tag-note">참고</span>&nbsp;알아두면 도움이 되는 배경 정보
+  </p>
+
   <!-- SECTION 1 -->
   <section class="sec" id="s1">
     <div class="sec-head">
@@ -614,8 +859,8 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
     </div>
     <p class="sec-desc">모든 강사진이 현장에 도착해서 실습 시작 전까지 세팅하고 숙지해야 할 기본 내용입니다.</p>
 
-    <div class="subsec" id="s1-1">
-      <h3><span class="subnum">1.1</span> 준비물 &amp; 과업 &amp; 용어정리</h3>
+    <div class="subsec pri-must" id="s1-1">
+      <h3><span class="subnum">1.1</span> 준비물 &amp; 과업 &amp; 용어정리 <span class="tag tag-must">필수</span></h3>
       <ul>
         <li><strong>준비물</strong>
           <ul>
@@ -625,14 +870,27 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
             <li>마이크·노트북 등 현장 장비(세부 점검 항목은 1.5 참고).</li>
           </ul>
         </li>
-        <li><strong>과업(역할 정의)</strong>
-          <ul>
-            <li><strong>주강사</strong> — 교육 품질과 실습 진행을 총괄.</li>
-            <li><strong>보조강사</strong> — 교육 당일 환경 안정성과 장애 대응을 총괄.</li>
-          </ul>
-        </li>
         <li><strong>용어정리</strong> — 고객사 주요 용어는 강의 중 자연스럽게 사용할 수 있도록 기억해 주세요.</li>
       </ul>
+      <p style="margin:14px 0 6px;font-size:13.5px;font-weight:700;color:var(--ink);">과업(역할 정의)</p>
+      <div class="role-cards">
+        <div class="role-card">
+          <h4>주강사</h4>
+          <ul>
+            <li>교육 품질과 실습 진행 총괄</li>
+            <li>정규 강의 진행 및 시간 준수</li>
+            <li>과제 안내 및 수료 조건 고지</li>
+          </ul>
+        </div>
+        <div class="role-card">
+          <h4>보조강사</h4>
+          <ul>
+            <li>교육 당일 환경 안정성과 장애 대응 총괄</li>
+            <li>로그인·접속 오류 1차 대응</li>
+            <li>실습 지원 및 진도 이탈 교육생 케어</li>
+          </ul>
+        </div>
+      </div>
       <table class="site-table">
         <thead><tr><th>용어</th><th>비고</th></tr></thead>
         <tbody>
@@ -647,8 +905,8 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       </table>
     </div>
 
-    <div class="subsec" id="s1-2">
-      <h3><span class="subnum">1.2</span> 교육 소개</h3>
+    <div class="subsec pri-note" id="s1-2">
+      <h3><span class="subnum">1.2</span> 교육 소개 <span class="tag tag-note">참고</span></h3>
       <ul>
         <li><strong>교육 대상</strong> — 전 사원 대상 약 7,500명(이 중 절반은 SEMco-Work 경험자). 전사원 대상 교육이므로 교육생 사전정보는 제공하지 않는 <strong>제로베이스</strong> 진행이 원칙.</li>
         <li><strong>임직원 평균 수준 참고 사항</strong> — 총 5단계 레벨 중 평균 2레벨(문서 작성 및 채팅을 활용한 도움을 얻는 수준)에 해당합니다. 매 사업장 초반 강의는 AI 관련부서 및 숙련자들이 배정되었으며, 후순위 차수는 AI 사용도가 낮거나 거의 없는 교육생들이 배정됩니다.</li>
@@ -657,8 +915,8 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       </ul>
     </div>
 
-    <div class="subsec" id="s1-3">
-      <h3><span class="subnum">1.3</span> 출석 및 강의시간 안내</h3>
+    <div class="subsec pri-must" id="s1-3">
+      <h3><span class="subnum">1.3</span> 출석 및 강의시간 안내 <span class="tag tag-must">필수</span></h3>
       <ul>
         <li>표준 강의시간은 <strong>4시간</strong>(세부 시간 배분은 주강사 가이드 2.1 참고). 일찍 끝내거나 늦게 끝내지 않는 <strong>정시 운영</strong>을 준수합니다.</li>
         <li>수료 조건에는 <strong>과제 제출</strong>이 필수로 포함(과제 안내는 주강사 가이드 2.5 참고).</li>
@@ -667,8 +925,8 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       <div class="gap"><span class="glabel">확인 필요</span>지각·조퇴 처리 기준은 아직 업데이트 필요.</div>
     </div>
 
-    <div class="subsec" id="s1-4">
-      <h3><span class="subnum">1.4</span> 학습이해도 기록 안내</h3>
+    <div class="subsec pri-note" id="s1-4">
+      <h3><span class="subnum">1.4</span> 학습이해도 기록 안내 <span class="tag tag-note">참고</span></h3>
       <ul>
         <li>실습 중 진도 이탈, 반복적인 오류, 이해도 편차 등 <strong>특이사항이 발견되면 기록</strong>해 두고, 교육 종료 후 운영진과 공유.</li>
         <li>사전진단 결과(평균 2~3레벨)를 기준으로 실제 학습 난이도 체감 차이를 관찰해 강의 개선에 참고.</li>
@@ -677,8 +935,8 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       <div class="gap"><span class="glabel">확인 필요</span>특이사항 기록 양식 및 공유 채널(운영진 보고 방법)은 아직 확정 전이므로, 정해지는 대로 반영 예정.</div>
     </div>
 
-    <div class="subsec" id="s1-5">
-      <h3><span class="subnum">1.5</span> 교육장 환경 체크</h3>
+    <div class="subsec pri-must" id="s1-5">
+      <h3><span class="subnum">1.5</span> 교육장 환경 체크 <span class="tag tag-must">필수</span></h3>
       <ul>
         <li><strong>출입 방법</strong> — 강의장 출입 비밀번호 <strong>"8203"</strong>(수원 드림플라자 203호 기준). <strong>타 사업장 출입 방식은 업데이트 필요</strong>.</li>
         <li><strong>첫 내방 안내</strong> — 첫 내방 시 고객사 담당자가 교육장까지 직접 안내합니다. 상세 교육장 위치는 이후 업데이트 예정.</li>
@@ -703,8 +961,8 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       </ul>
     </div>
 
-    <div class="subsec" id="s1-6">
-      <h3><span class="subnum">1.6</span> 사내 AI 시스템 접속 준비</h3>
+    <div class="subsec pri-must" id="s1-6">
+      <h3><span class="subnum">1.6</span> 사내 AI 시스템 접속 준비 <span class="tag tag-must">필수</span></h3>
       <ul>
         <li><strong>계정 체계</strong> — 강사는 공통 계정 1개를 사용(학습자도 동일한 교육용 계정 사용). 백단에서 IP 기준으로 접속을 구분하므로 동시 접속이 가능.</li>
         <li><strong>보조강사는 강의 전 PC 및 실습 계정 로그인이 반드시 필요</strong>합니다.</li>
@@ -722,8 +980,8 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       </ul>
     </div>
 
-    <div class="subsec" id="s1-7">
-      <h3><span class="subnum">1.7</span> 보안 주의 사항</h3>
+    <div class="subsec pri-must" id="s1-7">
+      <h3><span class="subnum">1.7</span> 보안 주의 사항 <span class="tag tag-must">필수</span></h3>
       <div class="gap"><span class="glabel">확인 필요</span>실습 시 입력 금지 대상이 되는 사내 민감정보의 세부 기준 및 화면 공유 시 유의사항은 아직 세부 확정 전입니다. 확정 전까지는 아래 원칙으로 안내해 주세요.</div>
       <ul>
         <li>교육생이 실습 중 예시 데이터가 아닌 실제 사내 문서나 개인정보·기밀정보를 입력하려 하면 예시 데이터로 바꿔 진행하도록 안내.</li>
@@ -732,8 +990,8 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       </ul>
     </div>
 
-    <div class="subsec" id="s1-8">
-      <h3><span class="subnum">1.8</span> 생활 안내</h3>
+    <div class="subsec pri-note" id="s1-8">
+      <h3><span class="subnum">1.8</span> 생활 안내 <span class="tag tag-note">참고</span></h3>
       <div class="gap"><span class="glabel">확인 필요</span>세종·부산 사업장의 흡연장소는 아직 명시되어 있지 않습니다. 사업장별 운영담당자에게 확인해 아래 표를 채워 주세요.</div>
       <table class="site-table">
         <thead><tr><th>사업장</th><th>흡연장소</th><th>식당·편의시설</th><th>내방(방문) 신청</th></tr></thead>
@@ -745,8 +1003,8 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       </table>
     </div>
 
-    <div class="subsec" id="s1-9">
-      <h3><span class="subnum">1.9</span> 비상 연락망</h3>
+    <div class="subsec pri-must" id="s1-9">
+      <h3><span class="subnum">1.9</span> 비상 연락망 <span class="tag tag-must">필수</span></h3>
       <table class="site-table">
         <thead><tr><th>사업장</th><th>담당자</th><th>이메일</th></tr></thead>
         <tbody>
@@ -762,19 +1020,86 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       </ul>
     </div>
 
-    <div class="subsec" id="s1-10">
-      <h3><span class="subnum">1.10</span> 차수별 특이사항 기록</h3>
-      <p>교육 차수가 진행될 때마다 현장에서 발생한 특이사항·건의사항을 아래 표에 이어서 기록해 주세요. 행이 부족하면 자유롭게 추가하시면 됩니다.</p>
-      <table class="site-table">
-        <thead><tr><th>차수</th><th>일자</th><th>사업장</th><th>특이사항</th><th>조치·전달사항</th></tr></thead>
-        <tbody>
-          <tr><td>1차</td><td></td><td></td><td></td><td></td></tr>
-          <tr><td>2차</td><td></td><td></td><td></td><td></td></tr>
-          <tr><td>3차</td><td></td><td></td><td></td><td></td></tr>
-          <tr><td>4차</td><td></td><td></td><td></td><td></td></tr>
-          <tr><td>5차</td><td></td><td></td><td></td><td></td></tr>
-        </tbody>
-      </table>
+    <div class="subsec pri-note" id="s1-10">
+      <h3><span class="subnum">1.10</span> 차수별 특이사항 기록 <span class="tag tag-note">참고</span></h3>
+      <p>교육 차수가 진행될 때마다 현장에서 발생한 특이사항·건의사항을 아래 항목을 눌러 펼친 뒤 이어서 기록해 주세요. 차수가 부족하면 같은 형태로 항목을 복사해 추가하시면 됩니다.</p>
+
+      <details class="acc-item">
+        <summary>1차 <span class="acc-meta">일자 · 사업장 미기재</span></summary>
+        <div class="acc-body">
+          <div class="field"><b>일자</b></div>
+          <div class="field"><b>사업장</b></div>
+          <div class="field"><b>특이사항</b></div>
+          <div class="field"><b>조치·전달사항</b></div>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary>2차 <span class="acc-meta">일자 · 사업장 미기재</span></summary>
+        <div class="acc-body">
+          <div class="field"><b>일자</b></div>
+          <div class="field"><b>사업장</b></div>
+          <div class="field"><b>특이사항</b></div>
+          <div class="field"><b>조치·전달사항</b></div>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary>3차 <span class="acc-meta">일자 · 사업장 미기재</span></summary>
+        <div class="acc-body">
+          <div class="field"><b>일자</b></div>
+          <div class="field"><b>사업장</b></div>
+          <div class="field"><b>특이사항</b></div>
+          <div class="field"><b>조치·전달사항</b></div>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary>4차 <span class="acc-meta">일자 · 사업장 미기재</span></summary>
+        <div class="acc-body">
+          <div class="field"><b>일자</b></div>
+          <div class="field"><b>사업장</b></div>
+          <div class="field"><b>특이사항</b></div>
+          <div class="field"><b>조치·전달사항</b></div>
+        </div>
+      </details>
+
+      <details class="acc-item">
+        <summary>5차 <span class="acc-meta">일자 · 사업장 미기재</span></summary>
+        <div class="acc-body">
+          <div class="field"><b>일자</b></div>
+          <div class="field"><b>사업장</b></div>
+          <div class="field"><b>특이사항</b></div>
+          <div class="field"><b>조치·전달사항</b></div>
+        </div>
+      </details>
+    </div>
+
+    <div class="subsec pri-must" id="s1-11">
+      <h3><span class="subnum">1.11</span> 강의 품위 유지 (Do &amp; Don't) <span class="tag tag-must">필수</span></h3>
+      <p>모든 강사·보조강사가 동일한 기준으로 신뢰감 있게 교육을 진행할 수 있도록, 아래 사항을 지켜 주세요.</p>
+      <div class="dodont">
+        <div class="col do">
+          <h4>반드시 지켜야 할 사항 (Do)</h4>
+          <ul>
+            <li>단정하고 깔끔한 복장 착용</li>
+            <li>모든 교육생에게 존댓말 사용</li>
+            <li>바른 자세와 안정된 목소리 유지</li>
+            <li>교육생 질문에 성실하고 친절하게 응대</li>
+            <li>강의 시작·종료 시간 철저 준수</li>
+          </ul>
+        </div>
+        <div class="col dont">
+          <h4>절대 해서는 안 되는 행동 (Don't)</h4>
+          <ul>
+            <li>고객사·사내 시스템에 대한 개인적 의견·평가</li>
+            <li>정치·종교·성별 등 편향된 발언</li>
+            <li>비속어 및 부정적·단정적 표현</li>
+            <li>교육생을 비교·비하하는 언행</li>
+            <li>교육생 개인정보 수집·무단 공유 또는 개인적 연락</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -786,8 +1111,8 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
     </div>
     <p class="sec-desc">적극적인 개입보다는 교육생이 막히는 부분을 빠르게 풀어주고 시스템 오류를 해결해 주는 데 초점을 맞춘 지침입니다.</p>
 
-    <div class="subsec" id="s3-1">
-      <h3><span class="subnum">3.1</span> 대기 위치 및 동선</h3>
+    <div class="subsec pri-note" id="s3-1">
+      <h3><span class="subnum">3.1</span> 대기 위치 및 동선 <span class="tag tag-note">참고</span></h3>
       <ul>
         <li>사업장별 규모가 다르므로(수원 노트북 40대, 세종 데스크톱 약 25명, 부산 PC 78대·정원 55명 이하) 강의장별로 교육생 모니터가 잘 보이는 대기 위치를 현장 도착 후 미리 파악.</li>
       </ul>
@@ -797,8 +1122,8 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       </ul>
     </div>
 
-    <div class="subsec" id="s3-2">
-      <h3><span class="subnum">3.2</span> 질의응답(Q&amp;A) 지원 요령</h3>
+    <div class="subsec pri-must" id="s3-2">
+      <h3><span class="subnum">3.2</span> 질의응답(Q&amp;A) 지원 요령 <span class="tag tag-must">필수</span></h3>
       <ul>
         <li>대신 타자를 쳐주거나 정답을 바로 알려주지 않고, <strong>무엇을 시도해봤는지</strong> 되물은 뒤 다음 단계를 힌트 형태로 제시.</li>
         <li>시스템 기능이나 라이선스 관련 질문은 보조강사가 직접 답하지 말고 <strong>Support 채널</strong>로 안내하고, 라이선스 갱신 관련 내용은 언급하지 않음.</li>
@@ -810,8 +1135,8 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       </div>
     </div>
 
-    <div class="subsec" id="s3-3">
-      <h3><span class="subnum">3.3</span> 자주 발생하는 문제(FAQ)와 해결법</h3>
+    <div class="subsec pri-must" id="s3-3">
+      <h3><span class="subnum">3.3</span> 자주 발생하는 문제(FAQ)와 해결법 <span class="tag tag-must">필수</span></h3>
       <ul>
         <li><strong>로그인이 안 되거나 권한이 없다고 나올 때</strong>
           <ul>
@@ -830,8 +1155,8 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       </ul>
     </div>
 
-    <div class="subsec" id="s3-4">
-      <h3><span class="subnum">3.4</span> 현장 도움 요청 방법</h3>
+    <div class="subsec pri-must" id="s3-4">
+      <h3><span class="subnum">3.4</span> 현장 도움 요청 방법 <span class="tag tag-must">필수</span></h3>
       <ul>
         <li>보조강사 선에서 해결이 안 되는 오류는 강의 흐름을 방해하지 않도록 <strong>조용히</strong>(마이크를 사용하지 않고 메모나 손짓 등으로) 주강사 또는 운영진에게 전달.</li>
         <li><strong>서버 전체 장애</strong> 등 심각한 이슈는 즉시 주강사와 교육운영 담당자에게 공유.</li>
@@ -839,13 +1164,18 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       </ul>
     </div>
 
-    <div class="subsec" id="s3-5">
-      <h3><span class="subnum">3.5</span> AI 일반 질문 대비</h3>
+    <div class="subsec pri-note" id="s3-5">
+      <h3><span class="subnum">3.5</span> AI 일반 질문 대비 <span class="tag tag-note">참고</span></h3>
       <p>보조강사에게는 실습 지원 외에도 <strong>SEMCo-Work 자체보다는 AI 개념·산업 전반</strong>에 대한 범용 질문이 들어올 수 있습니다. 아래 예시 답변을 미리 숙지해 두시면 당황하지 않고 안내하실 수 있습니다.</p>
 
       <div class="script">
+        <span class="label">Q. SEMCo-Work 결과물이 마음에 안 드는데요?</span>
+        지금 실습 환경은 <strong>기능 교육 목적으로 하위 모델이 연결</strong>되어 있어서 그렇습니다. 실제 업무에 복귀해서 사용하실 때는 <strong>더 상위 모델이 연결되어 있어 지금보다 훨씬 좋은 결과</strong>가 나올 거라고 안내해 주세요. 오늘 배운 기능 위주로 익히시고, 업무에 돌아가서 많이 사용해 보시라고 권해 주시면 됩니다.
+      </div>
+
+      <div class="script">
         <span class="label">Q. 지금 가장 우수한 AI 모델은 무엇인가요?</span>
-        여러 벤치마크에서 최상위권을 유지하는 모델들이 있지만, 모델마다 강점이 다릅니다(예: 범용성·이미지 생성에 강한 모델, 협업 도구와의 연동성이 강한 모델 등). 실제 차이는 근소하며, 실무자들도 목적에 따라 <strong>여러 모델을 함께 사용</strong>하는 경우가 많다고 안내해 주세요.
+        이 교육 환경에서는 상용 모델을 직접 비교·사용할 수 없으므로, 특정 모델명을 콕 집어 답하기보다 <strong>일반적인 상식 수준</strong>에서 안내해 주세요 — "AI 모델은 계속 발전하고 있고, 회사마다 강점이 조금씩 다르며, 순위도 자주 바뀐다" 정도로 답하면 충분합니다.
       </div>
 
       <div class="script">
@@ -860,7 +1190,17 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
 
       <div class="script">
         <span class="label">Q. 회사 PC에서 AI를 사용하면 정보가 다 외부로 넘어가나요?</span>
-        <strong>"절대 안전하다"고 답변하지 않도록 주의</strong>해 주세요. 기업용 서비스는 데이터 학습 제외·보존 정책을 안내하지만, 내부 운영의 세부 내용은 벤더만 알 수 있는 영역이라 전 세계적으로 조심스럽게 접근하고 있다고 설명해 주세요.
+        <strong>"완전히 안전하다"고 답변하지 않도록 주의</strong>해 주세요. 다만 <strong>AEGIS(이지스) 플랫폼이 적용되어 있어, 위험한 정보가 있는지 시스템 차원에서 한 번 점검을 거친다</strong>고 안내해 주시면 됩니다.
+      </div>
+
+      <div class="script">
+        <span class="label">Q. 다른 사람들은 어떻게 활용하고 있는지 확인할 수 있나요?</span>
+        <strong>Marketplace</strong>에 들어가시면 실제 활용 사례와 새로 추가되는 skill들을 확인하실 수 있다고 안내해 주세요.
+      </div>
+
+      <div class="script">
+        <span class="label">Q. SEMCo-Work을 업무에서 쓰다가 궁금한 점이 생기면 어떻게 하나요?</span>
+        <strong>Support 메뉴</strong>를 통해 도움을 받으실 수 있다고 안내해 주세요.
       </div>
 
       <div class="gap"><span class="glabel">확인 필요</span>"AI 채팅에 이전 대화 내용이 기억되나요?" 등 SEMCo-Work의 대화 기억·개인화 설정과 직접 관련된 질문은 플랫폼별 세부 사양이 아직 확인되지 않았으므로, 즉답하기보다 주강사 또는 운영 담당자에게 확인 후 안내해 주세요.</div>
@@ -874,17 +1214,20 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       <h2>보조강사 당일 체크리스트</h2>
     </div>
     <div class="subsec">
-      <ul class="checklist">
-        <li>강의 시작 전 모든 PC 로그인 상태 확인</li>
-        <li>공통 강사계정 정상 접속 여부 확인</li>
-        <li>마이크·볼륨·노트북 등 장비 점검</li>
-        <li>녹스 포털 로그인 해제 시 운영자와 연계하여 재접속 지원</li>
-        <li>실습 중 접속·계정·기능 오류 1차 대응</li>
-        <li>서버 장애 발생 시 강사와 교육운영 담당자에게 즉시 공유</li>
-        <li>실습폴더 복사 및 개인폴더 생성이 정상적으로 이뤄지는지 지원</li>
-        <li>모듈 4 실습 시 학습자별 진행상황 적극 지원</li>
-        <li>사전교육 영상 사전 숙지</li>
-      </ul>
+      <table class="check-table">
+        <thead><tr><th style="width:36px;">No</th><th style="width:76px;">구분</th><th>체크리스트</th><th class="chk">체크</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td class="cat" rowspan="4">교육 전</td><td>강의 시작 전 모든 PC 로그인 상태 확인</td><td class="chk"><span class="box"></span></td></tr>
+          <tr><td>2</td><td>공통 강사계정 정상 접속 여부 확인</td><td class="chk"><span class="box"></span></td></tr>
+          <tr><td>3</td><td>마이크·볼륨·노트북 등 장비 점검</td><td class="chk"><span class="box"></span></td></tr>
+          <tr><td>4</td><td>사전교육 영상 사전 숙지</td><td class="chk"><span class="box"></span></td></tr>
+          <tr><td>5</td><td class="cat" rowspan="5">교육 중</td><td>녹스 포털 로그인 해제 시 운영자와 연계하여 재접속 지원</td><td class="chk"><span class="box"></span></td></tr>
+          <tr><td>6</td><td>실습 중 접속·계정·기능 오류 1차 대응</td><td class="chk"><span class="box"></span></td></tr>
+          <tr><td>7</td><td>서버 장애 발생 시 강사와 교육운영 담당자에게 즉시 공유</td><td class="chk"><span class="box"></span></td></tr>
+          <tr><td>8</td><td>실습폴더 복사 및 개인폴더 생성이 정상적으로 이뤄지는지 지원</td><td class="chk"><span class="box"></span></td></tr>
+          <tr><td>9</td><td>모듈 4 실습 시 학습자별 진행상황 적극 지원</td><td class="chk"><span class="box"></span></td></tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
