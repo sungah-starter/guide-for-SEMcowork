@@ -80,3 +80,22 @@ textarea.editor{
 .save-msg{font-size:13px;color:var(--muted);}
 .save-msg.ok{color:#1a7a2e;}
 .save-msg.err{color:var(--err);}
+
+/* ---- WYSIWYG toolbar ---- */
+.edit-toolbar{
+  display:flex;align-items:center;gap:6px;flex-wrap:wrap;
+  border:1px solid var(--line);border-radius:10px;padding:8px;margin-bottom:12px;background:#fafafa;
+}
+.edit-toolbar .grp{display:flex;gap:4px;padding-right:8px;margin-right:8px;border-right:1px solid var(--line);}
+.edit-toolbar .grp:last-of-type{border-right:none;}
+.edit-toolbar button{
+  min-width:32px;height:32px;padding:0 9px;border:1px solid var(--line);border-radius:7px;background:#fff;
+  font-size:13.5px;font-weight:700;cursor:pointer;font-family:inherit;color:var(--ink-soft);
+}
+.edit-toolbar button:hover{border-color:var(--ink);color:var(--ink);}
+.edit-toolbar button.active{background:var(--ink);color:#fff;border-color:var(--ink);}
+.edit-toolbar .spacer{flex:1;}
+
+iframe.editor-frame{
+  width:100%;height:calc(100vh - 230px);border:1px solid var(--line);border-radius:10px;background:#fff;
+}
