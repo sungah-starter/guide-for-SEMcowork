@@ -98,42 +98,6 @@ nav.toc ul ul a{font-weight:400;font-size:13.5px;color:var(--ink-soft);}
 @media print{.acc-item{border:1px solid var(--line);}
   .acc-item:not([open]) .acc-body{display:block !important;}
   .acc-item summary::after{display:none;}}
-.flow{display:flex;align-items:stretch;flex-wrap:wrap;gap:0;margin:14px 0 16px;}
-.flow-step{flex:1 1 150px;background:var(--soft);border:1px solid var(--line);border-radius:10px;
-  padding:16px 14px;text-align:center;}
-.flow-step .fnum{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;
-  border-radius:50%;background:var(--ink);color:#fff;font-weight:700;font-size:13px;margin-bottom:8px;
-  font-variant-numeric:tabular-nums;}
-.flow-step .ftitle{font-weight:700;font-size:13.5px;margin-bottom:4px;color:var(--ink);}
-.flow-step .fdesc{font-size:12px;color:var(--muted);line-height:1.5;}
-.flow-arrow{flex:0 0 auto;display:flex;align-items:center;justify-content:center;
-  color:var(--muted);font-size:18px;padding:0 6px;}
-@media (max-width:700px){.flow{flex-direction:column;}
-  .flow-arrow{transform:rotate(90deg);padding:2px 0;align-self:center;}}
-.role-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:10px 0 16px;}
-@media (max-width:560px){.role-cards{grid-template-columns:1fr;}}
-.role-card{border:1px solid var(--line);border-radius:10px;padding:14px 16px;}
-.role-card h4{margin:0 0 8px;font-size:14px;font-weight:800;color:var(--ink);}
-.role-card ul{margin:0;padding:0;list-style:none;}
-.role-card li{position:relative;padding-left:16px;margin-bottom:6px;font-size:13px;color:var(--ink-soft);}
-.role-card li::before{content:"–";position:absolute;left:0;color:var(--muted);}
-.dodont{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:10px 0 16px;}
-@media (max-width:560px){.dodont{grid-template-columns:1fr;}}
-.dodont .col{border-radius:10px;overflow:hidden;border:1px solid var(--line);}
-.dodont .col h4{margin:0;padding:10px 14px;font-size:13.5px;font-weight:700;color:#fff;
-  -webkit-print-color-adjust:exact;print-color-adjust:exact;}
-.dodont .do h4{background:#2f6f4f;}
-.dodont .dont h4{background:#a83232;}
-.dodont ul{margin:0;padding:12px 14px;list-style:none;}
-.dodont li{position:relative;padding-left:16px;margin-bottom:7px;font-size:13.5px;color:var(--ink-soft);}
-.dodont li::before{content:"–";position:absolute;left:0;color:var(--muted);}
-.check-table{width:100%;border-collapse:collapse;margin:6px 0 16px;font-size:13.5px;}
-.check-table th,.check-table td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;}
-.check-table thead th{border-bottom:2px solid var(--ink);font-size:11px;text-transform:uppercase;
-  letter-spacing:.05em;color:var(--muted);font-weight:700;}
-.check-table td.cat{font-weight:700;color:var(--ink);white-space:nowrap;}
-.check-table td.chk{width:36px;text-align:center;}
-.check-table td.chk .box{display:inline-block;width:15px;height:15px;border:1.5px solid var(--ink);border-radius:3px;}
 .script{
   margin:0 0 14px;padding:14px 18px;background:var(--soft);
   border-left:3px solid var(--ink);border-radius:0 6px 6px 0;color:var(--ink);
@@ -200,7 +164,6 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
           <li><a href="#s1-8">1.8 생활 안내</a></li>
           <li><a href="#s1-9">1.9 비상 연락망</a></li>
           <li><a href="#s1-10">1.10 차수별 특이사항 기록</a></li>
-          <li><a href="#s1-11">1.11 강의 품위 유지 (Do &amp; Don't)</a></li>
         </ul>
       </li>
       <li><a href="#s2">2. [주강사] 4시간 표준 강의 가이드</a>
@@ -241,27 +204,14 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
             <li>마이크·노트북 등 현장 장비(세부 점검 항목은 1.5 참고).</li>
           </ul>
         </li>
+        <li><strong>과업(역할 정의)</strong>
+          <ul>
+            <li><strong>주강사</strong> — 교육 품질과 실습 진행을 총괄.</li>
+            <li><strong>보조강사</strong> — 교육 당일 환경 안정성과 장애 대응을 총괄.</li>
+          </ul>
+        </li>
         <li><strong>용어정리</strong> — 고객사 주요 용어는 강의 중 자연스럽게 사용할 수 있도록 기억해 주세요.</li>
       </ul>
-      <p style="margin:14px 0 6px;font-size:13.5px;font-weight:700;color:var(--ink);">과업(역할 정의)</p>
-      <div class="role-cards">
-        <div class="role-card">
-          <h4>주강사</h4>
-          <ul>
-            <li>교육 품질과 실습 진행 총괄</li>
-            <li>정규 강의 진행 및 시간 준수</li>
-            <li>과제 안내 및 수료 조건 고지</li>
-          </ul>
-        </div>
-        <div class="role-card">
-          <h4>보조강사</h4>
-          <ul>
-            <li>교육 당일 환경 안정성과 장애 대응 총괄</li>
-            <li>로그인·접속 오류 1차 대응</li>
-            <li>실습 지원 및 진도 이탈 교육생 케어</li>
-          </ul>
-        </div>
-      </div>
       <table class="site-table">
         <thead><tr><th>용어</th><th>비고</th></tr></thead>
         <tbody>
@@ -447,33 +397,6 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
         </div>
       </details>
     </div>
-
-    <div class="subsec pri-must" id="s1-11">
-      <h3><span class="subnum">1.11</span> 강의 품위 유지 (Do &amp; Don't) <span class="tag tag-must">필수</span></h3>
-      <p>모든 강사·보조강사가 동일한 기준으로 신뢰감 있게 교육을 진행할 수 있도록, 아래 사항을 지켜 주세요.</p>
-      <div class="dodont">
-        <div class="col do">
-          <h4>반드시 지켜야 할 사항 (Do)</h4>
-          <ul>
-            <li>단정하고 깔끔한 복장 착용</li>
-            <li>모든 교육생에게 존댓말 사용</li>
-            <li>바른 자세와 안정된 목소리 유지</li>
-            <li>교육생 질문에 성실하고 친절하게 응대</li>
-            <li>강의 시작·종료 시간 철저 준수</li>
-          </ul>
-        </div>
-        <div class="col dont">
-          <h4>절대 해서는 안 되는 행동 (Don't)</h4>
-          <ul>
-            <li>고객사·사내 시스템에 대한 개인적 의견·평가</li>
-            <li>정치·종교·성별 등 편향된 발언</li>
-            <li>비속어 및 부정적·단정적 표현</li>
-            <li>교육생을 비교·비하하는 언행</li>
-            <li>교육생 개인정보 수집·무단 공유 또는 개인적 연락</li>
-          </ul>
-        </div>
-      </div>
-    </div>
   </section>
 
   <!-- SECTION 2 -->
@@ -487,17 +410,13 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
     <div class="subsec pri-must" id="s2-1">
       <h3><span class="subnum">2.1</span> 강의 준비 순서 <span class="tag tag-must">필수</span></h3>
       <p>고객사가 시연영상과 교안을 제공하며, 주강사는 이 자료에 맞춰 표준화된 내용으로 강의를 진행해야 합니다. 아래 순서대로 준비해 주세요.</p>
-      <div class="flow">
-        <div class="flow-step"><span class="fnum">1</span><div class="ftitle">시연 영상 시청</div><div class="fdesc">고객사 제공 실습 시연 영상을 먼저 끝까지 시청하며 진행 흐름 파악</div></div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-step"><span class="fnum">2</span><div class="ftitle">교안 비교 확인</div><div class="fdesc">시연 영상과 최신 교안(PPT)을 나란히 비교해 순서·멘트·화면 일치 확인</div></div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-step"><span class="fnum">3</span><div class="ftitle">스크립트·전파교육 숙지</div><div class="fdesc">제공 실습 스크립트와 강사 전파교육 유의사항을 빠짐없이 숙지</div></div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-step"><span class="fnum">4</span><div class="ftitle">사전 연습</div><div class="fdesc">실제 진행 속도로 최소 1회 리허설</div></div>
-        <div class="flow-arrow">→</div>
-        <div class="flow-step"><span class="fnum">5</span><div class="ftitle">현장 출강</div><div class="fdesc">준비 완료 후 현장 진행</div></div>
-      </div>
+      <ol class="steps">
+        <li><strong>시연 영상 시청</strong> — 고객사가 제공하는 실습 시연 영상을 먼저 끝까지 시청하며 진행 흐름을 파악.</li>
+        <li><strong>교안 비교 확인</strong> — 시연 영상과 최신 교안(PPT)을 나란히 비교해 순서·멘트·화면이 일치하는지 확인.</li>
+        <li><strong>제공 실습 스크립트 및 강사 전파교육 사항 숙지</strong> — 고객사가 제공한 실습 스크립트와 강사 전파교육 때 전달된 유의사항을 빠짐없이 숙지.</li>
+        <li><strong>사전 연습</strong> — 실제 진행 속도로 최소 1회 리허설.</li>
+        <li><strong>현장 출강</strong>.</li>
+      </ol>
       <div class="gap"><span class="glabel">주의</span>실습 중 발생하는 대기·여유 시간은 자율적으로 운영하되, <strong>사례 공유 등 시스템 활용 사례처럼 너무 열려 있는 질문</strong>은 사내 시스템에 대한 직접 문의로 이어질 수 있으므로 지양해 주세요. 대신 <strong>AI 도구·발전·트렌드, 타사 활용 사례, 강사 본인의 활용 경험</strong> 중심으로 시간을 풀어가는 것을 권장합니다.</div>
     </div>
 
@@ -595,27 +514,24 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       <h2>주강사 당일 체크리스트</h2>
     </div>
     <div class="subsec">
-      <table class="check-table">
-        <thead><tr><th style="width:36px;">No</th><th style="width:76px;">구분</th><th>체크리스트</th><th class="chk">체크</th></tr></thead>
-        <tbody>
-          <tr><td>1</td><td class="cat" rowspan="2">교육 전</td><td>오전 7시 30분 이전 강의장 도착</td><td class="chk"><span class="box"></span></td></tr>
-          <tr><td>2</td><td>최신 교안 기준으로 강의 준비</td><td class="chk"><span class="box"></span></td></tr>
-          <tr><td>3</td><td class="cat" rowspan="13">교육 중</td><td>검증·출처확인 프롬프트 적극 활용</td><td class="chk"><span class="box"></span></td></tr>
-          <tr><td>4</td><td>실습 여유시간은 사례 및 경험담 중심으로 활용</td><td class="chk"><span class="box"></span></td></tr>
-          <tr><td>5</td><td>외부 AI 확장 실습은 지양</td><td class="chk"><span class="box"></span></td></tr>
-          <tr><td>6</td><td>자유 Q&amp;A 확대 운영은 최소화</td><td class="chk"><span class="box"></span></td></tr>
-          <tr><td>7</td><td>모듈 2~3 동일 세션 활용</td><td class="chk"><span class="box"></span></td></tr>
-          <tr><td>8</td><td>모듈 4 시작 시 반드시 새 세션 생성 안내</td><td class="chk"><span class="box"></span></td></tr>
-          <tr><td>9</td><td>모듈 4 실습 시 학습자 지원 강화</td><td class="chk"><span class="box"></span></td></tr>
-          <tr><td>10</td><td>원본 실습폴더 수정 금지 안내</td><td class="chk"><span class="box"></span></td></tr>
-          <tr><td>11</td><td>개인폴더 복사 후 실습하도록 안내</td><td class="chk"><span class="box"></span></td></tr>
-          <tr><td>12</td><td>실습 결과물 삭제 금지 안내</td><td class="chk"><span class="box"></span></td></tr>
-          <tr><td>13</td><td>라이선스 갱신 관련 언급 금지</td><td class="chk"><span class="box"></span></td></tr>
-          <tr><td>14</td><td>녹스 연동은 직접 실행보다 녹화 시연 중심으로 진행</td><td class="chk"><span class="box"></span></td></tr>
-          <tr><td>15</td><td>사전진단 결과를 참고하여 강의 멘트와 난이도 조정</td><td class="chk"><span class="box"></span></td></tr>
-          <tr><td>16</td><td class="cat">교육 후</td><td>과제 제출이 수료 필수임을 안내</td><td class="chk"><span class="box"></span></td></tr>
-        </tbody>
-      </table>
+      <ul class="checklist">
+        <li>오전 7시 30분 이전 강의장 도착</li>
+        <li>최신 교안 기준으로 강의 준비</li>
+        <li>검증·출처확인 프롬프트 적극 활용</li>
+        <li>실습 여유시간은 사례 및 경험담 중심으로 활용</li>
+        <li>외부 AI 확장 실습은 지양</li>
+        <li>자유 Q&amp;A 확대 운영은 최소화</li>
+        <li>모듈 2~3 동일 세션 활용</li>
+        <li>모듈 4 시작 시 반드시 새 세션 생성 안내</li>
+        <li>모듈 4 실습 시 학습자 지원 강화</li>
+        <li>원본 실습폴더 수정 금지 안내</li>
+        <li>개인폴더 복사 후 실습하도록 안내</li>
+        <li>실습 결과물 삭제 금지 안내</li>
+        <li>과제 제출이 수료 필수임을 안내</li>
+        <li>라이선스 갱신 관련 언급 금지</li>
+        <li>녹스 연동은 직접 실행보다 녹화 시연 중심으로 진행</li>
+        <li>사전진단 결과를 참고하여 강의 멘트와 난이도 조정</li>
+      </ul>
     </div>
   </section>
 
@@ -728,42 +644,6 @@ nav.toc ul ul a{font-weight:400;font-size:13.5px;color:var(--ink-soft);}
 @media print{.acc-item{border:1px solid var(--line);}
   .acc-item:not([open]) .acc-body{display:block !important;}
   .acc-item summary::after{display:none;}}
-.flow{display:flex;align-items:stretch;flex-wrap:wrap;gap:0;margin:14px 0 16px;}
-.flow-step{flex:1 1 150px;background:var(--soft);border:1px solid var(--line);border-radius:10px;
-  padding:16px 14px;text-align:center;}
-.flow-step .fnum{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;
-  border-radius:50%;background:var(--ink);color:#fff;font-weight:700;font-size:13px;margin-bottom:8px;
-  font-variant-numeric:tabular-nums;}
-.flow-step .ftitle{font-weight:700;font-size:13.5px;margin-bottom:4px;color:var(--ink);}
-.flow-step .fdesc{font-size:12px;color:var(--muted);line-height:1.5;}
-.flow-arrow{flex:0 0 auto;display:flex;align-items:center;justify-content:center;
-  color:var(--muted);font-size:18px;padding:0 6px;}
-@media (max-width:700px){.flow{flex-direction:column;}
-  .flow-arrow{transform:rotate(90deg);padding:2px 0;align-self:center;}}
-.role-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:10px 0 16px;}
-@media (max-width:560px){.role-cards{grid-template-columns:1fr;}}
-.role-card{border:1px solid var(--line);border-radius:10px;padding:14px 16px;}
-.role-card h4{margin:0 0 8px;font-size:14px;font-weight:800;color:var(--ink);}
-.role-card ul{margin:0;padding:0;list-style:none;}
-.role-card li{position:relative;padding-left:16px;margin-bottom:6px;font-size:13px;color:var(--ink-soft);}
-.role-card li::before{content:"–";position:absolute;left:0;color:var(--muted);}
-.dodont{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:10px 0 16px;}
-@media (max-width:560px){.dodont{grid-template-columns:1fr;}}
-.dodont .col{border-radius:10px;overflow:hidden;border:1px solid var(--line);}
-.dodont .col h4{margin:0;padding:10px 14px;font-size:13.5px;font-weight:700;color:#fff;
-  -webkit-print-color-adjust:exact;print-color-adjust:exact;}
-.dodont .do h4{background:#2f6f4f;}
-.dodont .dont h4{background:#a83232;}
-.dodont ul{margin:0;padding:12px 14px;list-style:none;}
-.dodont li{position:relative;padding-left:16px;margin-bottom:7px;font-size:13.5px;color:var(--ink-soft);}
-.dodont li::before{content:"–";position:absolute;left:0;color:var(--muted);}
-.check-table{width:100%;border-collapse:collapse;margin:6px 0 16px;font-size:13.5px;}
-.check-table th,.check-table td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;}
-.check-table thead th{border-bottom:2px solid var(--ink);font-size:11px;text-transform:uppercase;
-  letter-spacing:.05em;color:var(--muted);font-weight:700;}
-.check-table td.cat{font-weight:700;color:var(--ink);white-space:nowrap;}
-.check-table td.chk{width:36px;text-align:center;}
-.check-table td.chk .box{display:inline-block;width:15px;height:15px;border:1.5px solid var(--ink);border-radius:3px;}
 .script{
   margin:0 0 14px;padding:14px 18px;background:var(--soft);
   border-left:3px solid var(--ink);border-radius:0 6px 6px 0;color:var(--ink);
@@ -830,7 +710,6 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
           <li><a href="#s1-8">1.8 생활 안내</a></li>
           <li><a href="#s1-9">1.9 비상 연락망</a></li>
           <li><a href="#s1-10">1.10 차수별 특이사항 기록</a></li>
-          <li><a href="#s1-11">1.11 강의 품위 유지 (Do &amp; Don't)</a></li>
         </ul>
       </li>
       <li><a href="#s3">3. [보조강사] 교육생 실습 지원 매뉴얼</a>
@@ -870,27 +749,14 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
             <li>마이크·노트북 등 현장 장비(세부 점검 항목은 1.5 참고).</li>
           </ul>
         </li>
+        <li><strong>과업(역할 정의)</strong>
+          <ul>
+            <li><strong>주강사</strong> — 교육 품질과 실습 진행을 총괄.</li>
+            <li><strong>보조강사</strong> — 교육 당일 환경 안정성과 장애 대응을 총괄.</li>
+          </ul>
+        </li>
         <li><strong>용어정리</strong> — 고객사 주요 용어는 강의 중 자연스럽게 사용할 수 있도록 기억해 주세요.</li>
       </ul>
-      <p style="margin:14px 0 6px;font-size:13.5px;font-weight:700;color:var(--ink);">과업(역할 정의)</p>
-      <div class="role-cards">
-        <div class="role-card">
-          <h4>주강사</h4>
-          <ul>
-            <li>교육 품질과 실습 진행 총괄</li>
-            <li>정규 강의 진행 및 시간 준수</li>
-            <li>과제 안내 및 수료 조건 고지</li>
-          </ul>
-        </div>
-        <div class="role-card">
-          <h4>보조강사</h4>
-          <ul>
-            <li>교육 당일 환경 안정성과 장애 대응 총괄</li>
-            <li>로그인·접속 오류 1차 대응</li>
-            <li>실습 지원 및 진도 이탈 교육생 케어</li>
-          </ul>
-        </div>
-      </div>
       <table class="site-table">
         <thead><tr><th>용어</th><th>비고</th></tr></thead>
         <tbody>
@@ -1074,33 +940,6 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
         </div>
       </details>
     </div>
-
-    <div class="subsec pri-must" id="s1-11">
-      <h3><span class="subnum">1.11</span> 강의 품위 유지 (Do &amp; Don't) <span class="tag tag-must">필수</span></h3>
-      <p>모든 강사·보조강사가 동일한 기준으로 신뢰감 있게 교육을 진행할 수 있도록, 아래 사항을 지켜 주세요.</p>
-      <div class="dodont">
-        <div class="col do">
-          <h4>반드시 지켜야 할 사항 (Do)</h4>
-          <ul>
-            <li>단정하고 깔끔한 복장 착용</li>
-            <li>모든 교육생에게 존댓말 사용</li>
-            <li>바른 자세와 안정된 목소리 유지</li>
-            <li>교육생 질문에 성실하고 친절하게 응대</li>
-            <li>강의 시작·종료 시간 철저 준수</li>
-          </ul>
-        </div>
-        <div class="col dont">
-          <h4>절대 해서는 안 되는 행동 (Don't)</h4>
-          <ul>
-            <li>고객사·사내 시스템에 대한 개인적 의견·평가</li>
-            <li>정치·종교·성별 등 편향된 발언</li>
-            <li>비속어 및 부정적·단정적 표현</li>
-            <li>교육생을 비교·비하하는 언행</li>
-            <li>교육생 개인정보 수집·무단 공유 또는 개인적 연락</li>
-          </ul>
-        </div>
-      </div>
-    </div>
   </section>
 
   <!-- SECTION 3 -->
@@ -1214,20 +1053,17 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       <h2>보조강사 당일 체크리스트</h2>
     </div>
     <div class="subsec">
-      <table class="check-table">
-        <thead><tr><th style="width:36px;">No</th><th style="width:76px;">구분</th><th>체크리스트</th><th class="chk">체크</th></tr></thead>
-        <tbody>
-          <tr><td>1</td><td class="cat" rowspan="4">교육 전</td><td>강의 시작 전 모든 PC 로그인 상태 확인</td><td class="chk"><span class="box"></span></td></tr>
-          <tr><td>2</td><td>공통 강사계정 정상 접속 여부 확인</td><td class="chk"><span class="box"></span></td></tr>
-          <tr><td>3</td><td>마이크·볼륨·노트북 등 장비 점검</td><td class="chk"><span class="box"></span></td></tr>
-          <tr><td>4</td><td>사전교육 영상 사전 숙지</td><td class="chk"><span class="box"></span></td></tr>
-          <tr><td>5</td><td class="cat" rowspan="5">교육 중</td><td>녹스 포털 로그인 해제 시 운영자와 연계하여 재접속 지원</td><td class="chk"><span class="box"></span></td></tr>
-          <tr><td>6</td><td>실습 중 접속·계정·기능 오류 1차 대응</td><td class="chk"><span class="box"></span></td></tr>
-          <tr><td>7</td><td>서버 장애 발생 시 강사와 교육운영 담당자에게 즉시 공유</td><td class="chk"><span class="box"></span></td></tr>
-          <tr><td>8</td><td>실습폴더 복사 및 개인폴더 생성이 정상적으로 이뤄지는지 지원</td><td class="chk"><span class="box"></span></td></tr>
-          <tr><td>9</td><td>모듈 4 실습 시 학습자별 진행상황 적극 지원</td><td class="chk"><span class="box"></span></td></tr>
-        </tbody>
-      </table>
+      <ul class="checklist">
+        <li>강의 시작 전 모든 PC 로그인 상태 확인</li>
+        <li>공통 강사계정 정상 접속 여부 확인</li>
+        <li>마이크·볼륨·노트북 등 장비 점검</li>
+        <li>녹스 포털 로그인 해제 시 운영자와 연계하여 재접속 지원</li>
+        <li>실습 중 접속·계정·기능 오류 1차 대응</li>
+        <li>서버 장애 발생 시 강사와 교육운영 담당자에게 즉시 공유</li>
+        <li>실습폴더 복사 및 개인폴더 생성이 정상적으로 이뤄지는지 지원</li>
+        <li>모듈 4 실습 시 학습자별 진행상황 적극 지원</li>
+        <li>사전교육 영상 사전 숙지</li>
+      </ul>
     </div>
   </section>
 
