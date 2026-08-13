@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>삼성전기 전사AI 활용 교육 · 강사 가이드 (관리자)</title>
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <span class="title">삼성전기 전사AI 활용 교육 · 강사 가이드</span>
+      <span class="badge">관리자</span>
+    </div>
+    <div class="tabs">
+      <button id="tabJugangsa" class="active">주강사용</button>
+      <button id="tabBojo">보조강사용</button>
+    </div>
+    <div class="header-actions">
+      <a href="/view.html">조회 화면 보기</a>
+      <button id="logoutBtn">로그아웃</button>
+    </div>
+  </header>
+  <p class="status-line" id="statusLine">불러오는 중...</p>
+
+  <div class="admin-grid">
+    <div class="admin-toolbar">
+      <button id="previewBtn" style="border:1px solid #e3e3e3;border-radius:8px;padding:8px 14px;font-weight:700;font-family:inherit;cursor:pointer;background:#fff;">미리보기 새로고침</button>
+      <div>
+        <span class="save-msg" id="saveMsg"></span>
+        <button id="saveBtn" style="margin-left:10px;background:#111;color:#fff;border:none;border-radius:8px;padding:10px 18px;font-weight:700;font-family:inherit;cursor:pointer;">저장하기</button>
+      </div>
+    </div>
+    <p style="font-size:13px;color:#6f6f6f;margin:-4px 0 12px;">
+      아래는 각 가이드의 원본 HTML입니다. 텍스트·목록 내용을 직접 수정한 뒤 저장하면 조회 화면에 바로 반영됩니다.
+      태그(&lt;div&gt;, &lt;li&gt; 등)의 구조는 최대한 유지한 채로 텍스트만 바꾸는 것을 권장합니다.
+    </p>
+    <textarea class="editor" id="editor" spellcheck="false"></textarea>
+    <p style="font-size:13px;color:#6f6f6f;margin-top:16px;">미리보기</p>
+    <iframe class="doc-frame" id="previewFrame" title="미리보기"></iframe>
+  </div>
+
+  <script>
+    let docs = null;
+    let current = 'jugangsa';
+
+    const editor = document.getElementById('editor');
+    const previewFrame = document.getElementById('previewFrame');
+    const statusLine = document.getElementById('statusLine');
+    const saveMsg = document.getElementById('saveMsg');
+    const tabJugangsa = document.getElementById('tabJugangsa');
+    const tabBojo = document.getElementById('tabBojo');
+
+    function loadIntoEditor() {
+      editor.value = current === 'jugangsa' ? docs.jugangsa : docs.bojo;
+      previewFrame.srcdoc = editor.value;
+      tabJugangsa.classList.toggle('active', current === 'jugangsa');
+      tabBojo.classList.toggle('active', current === 'bojo');
+    }
+
+    function switchTab(next) {
+      // keep unsaved edits of the tab we're leaving in memory
+      if (current === 'jugangsa') docs.jugangsa = editor.value;
+      else docs.bojo = editor.value;
+      current = next;
+      loadIntoEditor();
+    }
+
+    tabJugangsa.addEventListener('click', () => switchTab('jugangsa'));
+    tabBojo.addEventListener('click', () => switchTab('bojo'));
+
+    document.getElementById('previewBtn').addEventListener('click', () => {
+      previewFrame.srcdoc = editor.value;
+    });
+
+    document.getElementById('logoutBtn').addEventListener('click', async () => {
+      await fetch('/.netlify/functions/logout', { method: 'POST', credentials: 'include' });
+      window.location.href = '/index.html';
+    });
+
+    document.getElementById('saveBtn').addEventListener('click', async () => {
+      saveMsg.textContent = '저장 중...';
+      saveMsg.className = 'save-msg';
+      if (current === 'jugangsa') docs.jugangsa = editor.value;
+      else docs.bojo = editor.value;
+      try {
+        const res = await fetch('/.netlify/functions/content', {
+          method: 'PUT',
+          credentials: 'include',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ jugangsa: docs.jugangsa, bojo: docs.bojo }),
+        });
+        const data = await res.json();
+        if (!res.ok) {
+          saveMsg.textContent = data.error || '저장에 실패했습니다.';
+          saveMsg.className = 'save-msg err';
+          return;
+        }
+        docs = data;
+        saveMsg.textContent = '저장되었습니다. (' + new Date(data.updatedAt).toLocaleString('ko-KR') + ')';
+        saveMsg.className = 'save-msg ok';
+      } catch (e) {
+        saveMsg.textContent = '서버에 연결할 수 없습니다.';
+        saveMsg.className = 'save-msg err';
+      }
+    });
+
+    (async function load() {
+      try {
+        const res = await fetch('/.netlify/functions/content', { credentials: 'include' });
+        if (res.status === 401) {
+          window.location.href = '/index.html';
+          return;
+        }
+        const data = await res.json();
+        if (!res.ok) {
+          statusLine.textContent = data.error || '내용을 불러오지 못했습니다.';
+          return;
+        }
+        if (data.role !== 'admin') {
+          statusLine.textContent = '관리자 권한이 없습니다. 조회 화면으로 이동합니다.';
+          setTimeout(() => { window.location.href = '/view.html'; }, 1200);
+          return;
+        }
+        docs = data;
+        statusLine.textContent = data.updatedAt
+          ? ('마지막 수정: ' + new Date(data.updatedAt).toLocaleString('ko-KR'))
+          : '아직 수정된 이력이 없습니다 (초기 초안 표시 중).';
+        loadIntoEditor();
+      } catch (e) {
+        statusLine.textContent = '서버에 연결할 수 없습니다.';
+      }
+    })();
+  </script>
+</body>
+</html>

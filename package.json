@@ -1,0 +1,12 @@
+{
+  "name": "semco-ai-guide",
+  "private": true,
+  "version": "1.0.0",
+  "description": "삼성전기 전사AI 활용 교육 - 주강사/보조강사 가이드 (비밀번호 게이트 + 관리자 편집)",
+  "scripts": {
+    "dev": "netlify dev"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0"
+  }
+}
