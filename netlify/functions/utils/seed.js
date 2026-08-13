@@ -164,7 +164,7 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
           <ul>
             <li>최신 버전 교안(PPT) — 교안은 계속 수정될 예정이므로 강의 직전 항상 최신본 여부 확인.</li>
             <li>SEMCo-Work 계정 — 강사와 교육생 모두 공통 계정을 사용합니다. 계정은 운영자(보조강사)가 관리하며 <strong>교육생에게 공유하지 않습니다</strong>.</li>
-            <li>전체 서버 장애 대비용 사전 녹화 시연영상(전기 제공 예정).</li>
+            <li>전체 서버 장애 대비용 사전 녹화 시연영상(고객사 제공 예정).</li>
             <li>마이크·노트북 등 현장 장비(세부 점검 항목은 1.5 참고).</li>
           </ul>
         </li>
@@ -196,7 +196,7 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
         <li><strong>교육 대상</strong> — 전 사원 대상 약 7,500명(이 중 절반은 SEMco-Work 경험자). 전사원 대상 교육이므로 교육생 사전정보는 제공하지 않는 <strong>제로베이스</strong> 진행이 원칙.</li>
         <li><strong>임직원 평균 수준 참고 사항</strong> — 총 5단계 레벨 중 평균 2레벨(문서 작성 및 채팅을 활용한 도움을 얻는 수준)에 해당합니다. 매 사업장 초반 강의는 AI 관련부서 및 숙련자들이 배정되었으며, 후순위 차수는 AI 사용도가 낮거나 거의 없는 교육생들이 배정됩니다.</li>
         <li><strong>실습 환경/기능 구성</strong> — SEMco-Work의 스킬(기본 세팅) → 플러그인(기능 설명) → 에이전트(직접 생성 실습) → MCP(외부 연동) 순으로 구성되며, 모듈 2(대시보드 제작 등 실습) → 모듈 3(외부 스킬·MCP 활용) → 모듈 4(스킬 조합·통합 프로젝트) 순으로 심화.</li>
-        <li><strong>오리엔테이션 안내 내용</strong>(전기 교육담당자 진행) — 교육 환경 및 제약사항, 일부 학습자에게는 난이도가 쉬울 수 있다는 점, 향후 심화과정 검토 가능성, 만족도 조사 시 추가 교육 요구사항 작성 요청, 교육 개선에 의견을 반영할 예정임을 안내.</li>
+        <li><strong>오리엔테이션 안내 내용</strong>(고객사 교육담당자 진행) — 교육 환경 및 제약사항, 일부 학습자에게는 난이도가 쉬울 수 있다는 점, 향후 심화과정 검토 가능성, 만족도 조사 시 추가 교육 요구사항 작성 요청, 교육 개선에 의견을 반영할 예정임을 안내.</li>
       </ul>
     </div>
 
@@ -205,8 +205,9 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       <ul>
         <li>표준 강의시간은 <strong>4시간</strong>(세부 시간 배분은 2.1 참고). 일찍 끝내거나 늦게 끝내지 않는 <strong>정시 운영</strong>을 준수합니다.</li>
         <li>수료 조건에는 <strong>과제 제출</strong>이 필수입니다. 꼭 안내해 주세요(과제 안내는 2.5 참고).</li>
+        <li><strong>출석 체크</strong>는 <strong>수기 서명</strong>으로 진행합니다.</li>
       </ul>
-      <div class="gap"><span class="glabel">확인 필요</span>출석 체크 방식, 지각·조퇴 처리 기준 업데이트 필요(QR 체크, 수기 체크 등).</div>
+      <div class="gap"><span class="glabel">확인 필요</span>지각·조퇴 처리 기준은 아직 업데이트 필요.</div>
     </div>
 
     <div class="subsec" id="s1-4">
@@ -224,6 +225,7 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       <ul>
         <li><strong>도착 시간</strong> — 강사는 오전 7시 30분 이전 강의장 도착.</li>
         <li><strong>출입 방법</strong> — 강의장 출입 비밀번호 <strong>"8203"</strong>(수원 드림플라자 203호 기준). <strong>타 사업장 출입 방식은 업데이트 필요</strong>.</li>
+        <li><strong>첫 내방 안내</strong> — 첫 내방 시 고객사 담당자가 교육장까지 직접 안내합니다. 상세 교육장 위치는 이후 업데이트 예정.</li>
       </ul>
       <div class="gap"><span class="glabel">확인 필요</span>강의장 개방시간 최종 확정 및 강사 장기출입(장시간 상주) 가능 여부 — 확정되는 대로 별도 안내 예정.</div>
       <ul>
@@ -275,13 +277,13 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
 
     <div class="subsec" id="s1-8">
       <h3><span class="subnum">1.8</span> 생활 안내</h3>
-      <div class="gap"><span class="glabel">확인 필요</span>흡연장소, 내방(방문객) 신청 절차, 구내식당·편의시설 이용 방법 등 생활 관련 안내는 회의 자료에 별도 명시되어 있지 않습니다. 사업장별 운영담당자에게 확인해 아래 표를 채워 주세요.</div>
+      <div class="gap"><span class="glabel">확인 필요</span>세종·부산 사업장의 흡연장소, 내방(방문객) 신청 절차 등은 아직 명시되어 있지 않습니다. 사업장별 운영담당자에게 확인해 아래 표를 채워 주세요.</div>
       <table class="site-table">
-        <thead><tr><th>사업장</th><th>흡연장소</th><th>내방(방문) 신청</th></tr></thead>
+        <thead><tr><th>사업장</th><th>흡연장소</th><th>식당·편의시설</th><th>내방(방문) 신청</th></tr></thead>
         <tbody>
-          <tr><td>수원</td><td>확인 필요</td><td>확인 필요</td></tr>
-          <tr><td>세종</td><td>확인 필요</td><td>확인 필요</td></tr>
-          <tr><td>부산</td><td>확인 필요</td><td>확인 필요</td></tr>
+          <tr><td>수원</td><td>건물외부 이용</td><td>교육장 1층 커피숍 및 구내식당 이용 가능(점심)</td><td>확인 필요</td></tr>
+          <tr><td>세종</td><td>확인 필요</td><td>확인 필요</td><td>확인 필요</td></tr>
+          <tr><td>부산</td><td>확인 필요</td><td>확인 필요</td><td>확인 필요</td></tr>
         </tbody>
       </table>
     </div>
@@ -292,7 +294,7 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       <ul>
         <li>시스템 접속이 안 되거나 현장 장비에 문제가 생기면 <strong>고객사 운영담당자</strong>(시설·시스템·현장 운영 총괄)에게 즉시 연락.</li>
         <li><strong>서버 전체 장애</strong> 발생 시: ① 강사·보조강사가 즉시 교육운영 담당자에게 공유 → ② 교육을 일시 중단하고 휴게시간 제공 → ③ 서버 정상화 이후 미진행 모듈(스킬 모듈 등)을 재교육.</li>
-        <li>전체 서버 장애에 대비해 <strong>사전 녹화 시연영상</strong>(전기 제공 예정)을 항상 준비해 둘 것.</li>
+        <li>전체 서버 장애에 대비해 <strong>사전 녹화 시연영상</strong>(고객사 제공 예정)을 항상 준비해 둘 것.</li>
       </ul>
     </div>
   </section>
@@ -309,7 +311,7 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       <h3><span class="subnum">2.1</span> 4시간 교육 시간표와 시간 배분</h3>
       <div class="gap"><span class="glabel">확인 필요</span>분 단위 확정 시간표는 최신 교안 확정 후 별도 배포됩니다. 아래는 회의에서 논의된 모듈별 소요시간을 기준으로 정리한 잠정 배분 가이드이니, 실제 진행 시 최신 교안 기준 시간표를 우선 적용해 주세요.</div>
       <ul>
-        <li><strong>오리엔테이션</strong>(전기 교육담당자 진행) — 교육 환경 및 제약사항, 일부 학습자에게는 난이도가 쉬울 수 있다는 점, 향후 심화과정 검토 가능성, 만족도 조사 시 추가 교육 요구사항 작성 요청 등을 안내.</li>
+        <li><strong>오리엔테이션</strong>(고객사 교육담당자 진행) — 교육 환경 및 제약사항, 일부 학습자에게는 난이도가 쉬울 수 있다는 점, 향후 심화과정 검토 가능성, 만족도 조사 시 추가 교육 요구사항 작성 요청 등을 안내.</li>
         <li><strong>모듈 2</strong> — 실습 1건당 약 10~15분, <strong>대시보드 제작까지 진행</strong>하면 전체 강의시간을 적절히 확보 가능. 결과 검증 프롬프트·에이전트 시스템 프롬프트 관련 추가 장표 포함.</li>
         <li><strong>모듈 3</strong> — 실습당 약 5분 × 약 5개 실습. 외부 스킬 및 MCP 활용이 핵심 목표이며, 이 모듈에서는 별도 에이전트가 필요 없음.</li>
         <li><strong>모듈 4</strong> — 난이도가 높다는 의견이 많은 구간이므로 실습 지원 시간을 넉넉히 배분. 스킬 1 → 스킬 2 → 스킬 3을 각각 제작한 뒤 필요 시 불러오고, 마지막에 통합 프로젝트를 수행하는 구조로 진행(세부 구성은 협의 중).</li>
@@ -346,7 +348,7 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
           <ul><li>에이전트는 <strong>세션 생성 전에 먼저 만들어야</strong> 하므로, 관련 설명은 앞부분에서 먼저 진행.</li></ul>
         </li>
         <li><strong>녹스 연동</strong>은 학습자가 직접 수행하기보다 <strong>시연 위주</strong>로 진행(예: '자기 자신에게 메일 보내기' 같은 실제 연동 작업은 하지 않음).</li>
-        <li>강의 시간상 실시간 시연이 어려운 구간은 <strong>사전 녹화 영상</strong>(전기 제공 예정)으로 대체.</li>
+        <li>강의 시간상 실시간 시연이 어려운 구간은 <strong>사전 녹화 영상</strong>(고객사 제공 예정)으로 대체.</li>
       </ul>
       <div class="script">
         <span class="label">시스템 응답이 느려질 때 안내 멘트 예시</span>
@@ -580,7 +582,7 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
           <ul>
             <li>최신 버전 교안(PPT) — 교안은 계속 수정될 예정이므로 강의 직전 항상 최신본 여부 확인.</li>
             <li>SEMCo-Work 계정 — 강사와 교육생 모두 공통 계정을 사용합니다. 계정은 운영자(보조강사)가 관리하며 <strong>교육생에게 공유하지 않습니다</strong>.</li>
-            <li>전체 서버 장애 대비용 사전 녹화 시연영상(전기 제공 예정).</li>
+            <li>전체 서버 장애 대비용 사전 녹화 시연영상(고객사 제공 예정).</li>
             <li>마이크·노트북 등 현장 장비(세부 점검 항목은 1.5 참고).</li>
           </ul>
         </li>
@@ -612,7 +614,7 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
         <li><strong>교육 대상</strong> — 전 사원 대상 약 7,500명(이 중 절반은 SEMco-Work 경험자). 전사원 대상 교육이므로 교육생 사전정보는 제공하지 않는 <strong>제로베이스</strong> 진행이 원칙.</li>
         <li><strong>임직원 평균 수준 참고 사항</strong> — 총 5단계 레벨 중 평균 2레벨(문서 작성 및 채팅을 활용한 도움을 얻는 수준)에 해당합니다. 매 사업장 초반 강의는 AI 관련부서 및 숙련자들이 배정되었으며, 후순위 차수는 AI 사용도가 낮거나 거의 없는 교육생들이 배정됩니다.</li>
         <li><strong>실습 환경/기능 구성</strong> — SEMco-Work의 스킬(기본 세팅) → 플러그인(기능 설명) → 에이전트(직접 생성 실습) → MCP(외부 연동) 순으로 구성되며, 모듈 2(대시보드 제작 등 실습) → 모듈 3(외부 스킬·MCP 활용) → 모듈 4(스킬 조합·통합 프로젝트) 순으로 심화.</li>
-        <li><strong>오리엔테이션 안내 내용</strong>(전기 교육담당자 진행) — 교육 환경 및 제약사항, 일부 학습자에게는 난이도가 쉬울 수 있다는 점, 향후 심화과정 검토 가능성, 만족도 조사 시 추가 교육 요구사항 작성 요청, 교육 개선에 의견을 반영할 예정임을 안내.</li>
+        <li><strong>오리엔테이션 안내 내용</strong>(고객사 교육담당자 진행) — 교육 환경 및 제약사항, 일부 학습자에게는 난이도가 쉬울 수 있다는 점, 향후 심화과정 검토 가능성, 만족도 조사 시 추가 교육 요구사항 작성 요청, 교육 개선에 의견을 반영할 예정임을 안내.</li>
       </ul>
     </div>
 
@@ -621,8 +623,9 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       <ul>
         <li>표준 강의시간은 <strong>4시간</strong>(세부 시간 배분은 주강사 가이드 2.1 참고). 일찍 끝내거나 늦게 끝내지 않는 <strong>정시 운영</strong>을 준수합니다.</li>
         <li>수료 조건에는 <strong>과제 제출</strong>이 필수로 포함(과제 안내는 주강사 가이드 2.5 참고).</li>
+        <li><strong>출석 체크</strong>는 <strong>수기 서명</strong>으로 진행합니다.</li>
       </ul>
-      <div class="gap"><span class="glabel">확인 필요</span>출석 체크 방식, 지각·조퇴 처리 기준 업데이트 필요(QR 체크, 수기 체크 등).</div>
+      <div class="gap"><span class="glabel">확인 필요</span>지각·조퇴 처리 기준은 아직 업데이트 필요.</div>
     </div>
 
     <div class="subsec" id="s1-4">
@@ -639,6 +642,7 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       <h3><span class="subnum">1.5</span> 교육장 환경 체크</h3>
       <ul>
         <li><strong>출입 방법</strong> — 강의장 출입 비밀번호 <strong>"8203"</strong>(수원 드림플라자 203호 기준). <strong>타 사업장 출입 방식은 업데이트 필요</strong>.</li>
+        <li><strong>첫 내방 안내</strong> — 첫 내방 시 고객사 담당자가 교육장까지 직접 안내합니다. 상세 교육장 위치는 이후 업데이트 예정.</li>
       </ul>
       <div class="gap"><span class="glabel">확인 필요</span>강의장 개방시간 최종 확정 및 강사 장기출입(장시간 상주) 가능 여부 — 확정되는 대로 별도 안내 예정.</div>
       <ul>
@@ -690,13 +694,13 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
 
     <div class="subsec" id="s1-8">
       <h3><span class="subnum">1.8</span> 생활 안내</h3>
-      <div class="gap"><span class="glabel">확인 필요</span>흡연장소, 내방(방문객) 신청 절차, 구내식당·편의시설 이용 방법 등 생활 관련 안내는 회의 자료에 별도 명시되어 있지 않습니다. 사업장별 운영담당자에게 확인해 아래 표를 채워 주세요.</div>
+      <div class="gap"><span class="glabel">확인 필요</span>세종·부산 사업장의 흡연장소, 내방(방문객) 신청 절차 등은 아직 명시되어 있지 않습니다. 사업장별 운영담당자에게 확인해 아래 표를 채워 주세요.</div>
       <table class="site-table">
-        <thead><tr><th>사업장</th><th>흡연장소</th><th>내방(방문) 신청</th></tr></thead>
+        <thead><tr><th>사업장</th><th>흡연장소</th><th>식당·편의시설</th><th>내방(방문) 신청</th></tr></thead>
         <tbody>
-          <tr><td>수원</td><td>확인 필요</td><td>확인 필요</td></tr>
-          <tr><td>세종</td><td>확인 필요</td><td>확인 필요</td></tr>
-          <tr><td>부산</td><td>확인 필요</td><td>확인 필요</td></tr>
+          <tr><td>수원</td><td>건물외부 이용</td><td>교육장 1층 커피숍 및 구내식당 이용 가능(점심)</td><td>확인 필요</td></tr>
+          <tr><td>세종</td><td>확인 필요</td><td>확인 필요</td><td>확인 필요</td></tr>
+          <tr><td>부산</td><td>확인 필요</td><td>확인 필요</td><td>확인 필요</td></tr>
         </tbody>
       </table>
     </div>
