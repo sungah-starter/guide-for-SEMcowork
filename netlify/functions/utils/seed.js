@@ -163,7 +163,7 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
         <li><strong>준비물</strong>
           <ul>
             <li>최신 버전 교안(PPT) — 교안은 계속 수정될 예정이므로 강의 직전 항상 최신본 여부 확인.</li>
-            <li>강사 공통계정 로그인 정보(사전 공유받아 로그인 테스트 완료).</li>
+            <li>SEMCo-Work 계정 — 강사와 교육생 모두 공통 계정을 사용합니다. 계정은 운영자(보조강사)가 관리하며 <strong>교육생에게 공유하지 않습니다</strong>.</li>
             <li>전체 서버 장애 대비용 사전 녹화 시연영상(전기 제공 예정).</li>
             <li>마이크·노트북 등 현장 장비(세부 점검 항목은 1.5 참고).</li>
           </ul>
@@ -174,15 +174,18 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
             <li><strong>보조강사</strong> — 교육 당일 환경 안정성과 장애 대응을 총괄.</li>
           </ul>
         </li>
-        <li><strong>용어정리</strong> — 고객사 주요 용어는 강의 중 자연스럽게 사용할 수 있도록 숙지.</li>
+        <li><strong>용어정리</strong> — 고객사 주요 용어는 강의 중 자연스럽게 사용할 수 있도록 기억해 주세요.</li>
       </ul>
       <table class="site-table">
         <thead><tr><th>용어</th><th>비고</th></tr></thead>
         <tbody>
-          <tr><td>녹스</td><td>MCP로 연결되는 사내 시스템(메일 발송 등 연동 기능 포함)으로 추정 — 실습은 시연 위주로만 진행(2.3 참고). 정확한 정의는 강의 전 확인.</td></tr>
-          <tr><td>핌스</td><td>확인 필요 — 정확한 정의 및 활용 맥락은 고객사에서 별도 전달 예정.</td></tr>
-          <tr><td>이지스</td><td>확인 필요 — 정확한 정의 및 활용 맥락은 고객사에서 별도 전달 예정.</td></tr>
-          <tr><td>파도</td><td>확인 필요 — 정확한 정의 및 활용 맥락은 고객사에서 별도 전달 예정.</td></tr>
+          <tr><td>SEMCo-Work(샘코워크)</td><td>전체 적용. 삼성전기 자체 LLM이 적용된 플랫폼 및 서비스를 의미합니다. 클로드 코워크 환경과 유사합니다.</td></tr>
+          <tr><td>PIMS(핌스)</td><td>8번 슬라이드. 사내 시스템 명칭(일정관리) — 모듈2 MCP 연결 실습.</td></tr>
+          <tr><td>AEGIS(이지스)</td><td>20번 슬라이드. 사내 보안 체계 명칭.</td></tr>
+          <tr><td>PADO(파도)</td><td>22번 슬라이드. 기존 보안 플랫폼 명칭.</td></tr>
+          <tr><td>Marketplace</td><td>22번 슬라이드. 사내 skill 소스 및 사례 공유 사이트 명칭입니다. 샘코워크 하단 Setting 메뉴를 통해 접속 가능.</td></tr>
+          <tr><td>Knox(녹스)</td><td>모듈2. MCP로 연결되는 사내 시스템(메일 발송 등 연동 기능 포함) — 교육 계정 간 충돌이 나므로 시연 영상을 재생합니다(2.3 참고).</td></tr>
+          <tr><td>AI Builder</td><td>47번 슬라이드. 단일 Agent 만드는 기능을 샘코워크에서는 Builder로 표현합니다.</td></tr>
         </tbody>
       </table>
     </div>
@@ -191,7 +194,7 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       <h3><span class="subnum">1.2</span> 교육 소개</h3>
       <ul>
         <li><strong>교육 대상</strong> — 전 사원 대상 약 7,500명(이 중 절반은 SEMco-Work 경험자). 전사원 대상 교육이므로 교육생 사전정보는 제공하지 않는 <strong>제로베이스</strong> 진행이 원칙.</li>
-        <li>단, 사전진단 결과(평균 2~3레벨 수준)는 강사에게 공유될 예정이므로 눈높이 조정에 참고.</li>
+        <li><strong>임직원 평균 수준 참고 사항</strong> — 총 5단계 레벨 중 평균 2레벨(문서 작성 및 채팅을 활용한 도움을 얻는 수준)에 해당합니다. 매 사업장 초반 강의는 AI 관련부서 및 숙련자들이 배정되었으며, 후순위 차수는 AI 사용도가 낮거나 거의 없는 교육생들이 배정됩니다.</li>
         <li><strong>실습 환경/기능 구성</strong> — SEMco-Work의 스킬(기본 세팅) → 플러그인(기능 설명) → 에이전트(직접 생성 실습) → MCP(외부 연동) 순으로 구성되며, 모듈 2(대시보드 제작 등 실습) → 모듈 3(외부 스킬·MCP 활용) → 모듈 4(스킬 조합·통합 프로젝트) 순으로 심화.</li>
         <li><strong>오리엔테이션 안내 내용</strong>(전기 교육담당자 진행) — 교육 환경 및 제약사항, 일부 학습자에게는 난이도가 쉬울 수 있다는 점, 향후 심화과정 검토 가능성, 만족도 조사 시 추가 교육 요구사항 작성 요청, 교육 개선에 의견을 반영할 예정임을 안내.</li>
       </ul>
@@ -200,10 +203,10 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
     <div class="subsec" id="s1-3">
       <h3><span class="subnum">1.3</span> 출석 및 강의시간 안내</h3>
       <ul>
-        <li>표준 강의시간은 <strong>4시간</strong>(세부 시간 배분은 2.1 참고).</li>
-        <li>수료 조건에는 <strong>과제 제출</strong>이 필수로 포함(과제 안내는 2.5 참고).</li>
+        <li>표준 강의시간은 <strong>4시간</strong>(세부 시간 배분은 2.1 참고). 일찍 끝내거나 늦게 끝내지 않는 <strong>정시 운영</strong>을 준수합니다.</li>
+        <li>수료 조건에는 <strong>과제 제출</strong>이 필수입니다. 꼭 안내해 주세요(과제 안내는 2.5 참고).</li>
       </ul>
-      <div class="gap"><span class="glabel">확인 필요</span>출석 체크 방식, 지각·조퇴 처리 기준은 회의 자료에 별도 명시되어 있지 않습니다. 확정되는 대로 반영 예정.</div>
+      <div class="gap"><span class="glabel">확인 필요</span>출석 체크 방식, 지각·조퇴 처리 기준 업데이트 필요(QR 체크, 수기 체크 등).</div>
     </div>
 
     <div class="subsec" id="s1-4">
@@ -220,7 +223,7 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       <h3><span class="subnum">1.5</span> 교육장 환경 체크</h3>
       <ul>
         <li><strong>도착 시간</strong> — 강사는 오전 7시 30분 이전 강의장 도착.</li>
-        <li><strong>출입 방법</strong> — 강의장 출입 비밀번호 <strong>"8203"</strong>(수원 드림플라자 203호 기준). 사업장별로 출입 방식이 다를 수 있으니 현장 도착 전 재확인.</li>
+        <li><strong>출입 방법</strong> — 강의장 출입 비밀번호 <strong>"8203"</strong>(수원 드림플라자 203호 기준). <strong>타 사업장 출입 방식은 업데이트 필요</strong>.</li>
       </ul>
       <div class="gap"><span class="glabel">확인 필요</span>강의장 개방시간 최종 확정 및 강사 장기출입(장시간 상주) 가능 여부 — 확정되는 대로 별도 안내 예정.</div>
       <ul>
@@ -576,7 +579,7 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
         <li><strong>준비물</strong>
           <ul>
             <li>최신 버전 교안(PPT) — 교안은 계속 수정될 예정이므로 강의 직전 항상 최신본 여부 확인.</li>
-            <li>강사 공통계정 로그인 정보(사전 공유받아 로그인 테스트 완료).</li>
+            <li>SEMCo-Work 계정 — 강사와 교육생 모두 공통 계정을 사용합니다. 계정은 운영자(보조강사)가 관리하며 <strong>교육생에게 공유하지 않습니다</strong>.</li>
             <li>전체 서버 장애 대비용 사전 녹화 시연영상(전기 제공 예정).</li>
             <li>마이크·노트북 등 현장 장비(세부 점검 항목은 1.5 참고).</li>
           </ul>
@@ -587,15 +590,18 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
             <li><strong>보조강사</strong> — 교육 당일 환경 안정성과 장애 대응을 총괄.</li>
           </ul>
         </li>
-        <li><strong>용어정리</strong> — 고객사 주요 용어는 강의 중 자연스럽게 사용할 수 있도록 숙지.</li>
+        <li><strong>용어정리</strong> — 고객사 주요 용어는 강의 중 자연스럽게 사용할 수 있도록 기억해 주세요.</li>
       </ul>
       <table class="site-table">
         <thead><tr><th>용어</th><th>비고</th></tr></thead>
         <tbody>
-          <tr><td>녹스</td><td>MCP로 연결되는 사내 시스템(메일 발송 등 연동 기능 포함)으로 추정 — 실습은 시연 위주로만 진행(주강사 가이드 2.3 참고). 정확한 정의는 강의 전 확인.</td></tr>
-          <tr><td>핌스</td><td>확인 필요 — 정확한 정의 및 활용 맥락은 고객사에서 별도 전달 예정.</td></tr>
-          <tr><td>이지스</td><td>확인 필요 — 정확한 정의 및 활용 맥락은 고객사에서 별도 전달 예정.</td></tr>
-          <tr><td>파도</td><td>확인 필요 — 정확한 정의 및 활용 맥락은 고객사에서 별도 전달 예정.</td></tr>
+          <tr><td>SEMCo-Work(샘코워크)</td><td>전체 적용. 삼성전기 자체 LLM이 적용된 플랫폼 및 서비스를 의미합니다. 클로드 코워크 환경과 유사합니다.</td></tr>
+          <tr><td>PIMS(핌스)</td><td>8번 슬라이드. 사내 시스템 명칭(일정관리) — 모듈2 MCP 연결 실습.</td></tr>
+          <tr><td>AEGIS(이지스)</td><td>20번 슬라이드. 사내 보안 체계 명칭.</td></tr>
+          <tr><td>PADO(파도)</td><td>22번 슬라이드. 기존 보안 플랫폼 명칭.</td></tr>
+          <tr><td>Marketplace</td><td>22번 슬라이드. 사내 skill 소스 및 사례 공유 사이트 명칭입니다. 샘코워크 하단 Setting 메뉴를 통해 접속 가능.</td></tr>
+          <tr><td>Knox(녹스)</td><td>모듈2. MCP로 연결되는 사내 시스템(메일 발송 등 연동 기능 포함) — 교육 계정 간 충돌이 나므로 시연 영상을 재생합니다(주강사 가이드 2.3 참고).</td></tr>
+          <tr><td>AI Builder</td><td>47번 슬라이드. 단일 Agent 만드는 기능을 샘코워크에서는 Builder로 표현합니다.</td></tr>
         </tbody>
       </table>
     </div>
@@ -604,7 +610,7 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
       <h3><span class="subnum">1.2</span> 교육 소개</h3>
       <ul>
         <li><strong>교육 대상</strong> — 전 사원 대상 약 7,500명(이 중 절반은 SEMco-Work 경험자). 전사원 대상 교육이므로 교육생 사전정보는 제공하지 않는 <strong>제로베이스</strong> 진행이 원칙.</li>
-        <li>단, 사전진단 결과(평균 2~3레벨 수준)는 강사에게 공유될 예정이므로 눈높이 조정에 참고.</li>
+        <li><strong>임직원 평균 수준 참고 사항</strong> — 총 5단계 레벨 중 평균 2레벨(문서 작성 및 채팅을 활용한 도움을 얻는 수준)에 해당합니다. 매 사업장 초반 강의는 AI 관련부서 및 숙련자들이 배정되었으며, 후순위 차수는 AI 사용도가 낮거나 거의 없는 교육생들이 배정됩니다.</li>
         <li><strong>실습 환경/기능 구성</strong> — SEMco-Work의 스킬(기본 세팅) → 플러그인(기능 설명) → 에이전트(직접 생성 실습) → MCP(외부 연동) 순으로 구성되며, 모듈 2(대시보드 제작 등 실습) → 모듈 3(외부 스킬·MCP 활용) → 모듈 4(스킬 조합·통합 프로젝트) 순으로 심화.</li>
         <li><strong>오리엔테이션 안내 내용</strong>(전기 교육담당자 진행) — 교육 환경 및 제약사항, 일부 학습자에게는 난이도가 쉬울 수 있다는 점, 향후 심화과정 검토 가능성, 만족도 조사 시 추가 교육 요구사항 작성 요청, 교육 개선에 의견을 반영할 예정임을 안내.</li>
       </ul>
@@ -613,10 +619,10 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
     <div class="subsec" id="s1-3">
       <h3><span class="subnum">1.3</span> 출석 및 강의시간 안내</h3>
       <ul>
-        <li>표준 강의시간은 <strong>4시간</strong>(세부 시간 배분은 주강사 가이드 2.1 참고).</li>
+        <li>표준 강의시간은 <strong>4시간</strong>(세부 시간 배분은 주강사 가이드 2.1 참고). 일찍 끝내거나 늦게 끝내지 않는 <strong>정시 운영</strong>을 준수합니다.</li>
         <li>수료 조건에는 <strong>과제 제출</strong>이 필수로 포함(과제 안내는 주강사 가이드 2.5 참고).</li>
       </ul>
-      <div class="gap"><span class="glabel">확인 필요</span>출석 체크 방식, 지각·조퇴 처리 기준은 회의 자료에 별도 명시되어 있지 않습니다. 확정되는 대로 반영 예정.</div>
+      <div class="gap"><span class="glabel">확인 필요</span>출석 체크 방식, 지각·조퇴 처리 기준 업데이트 필요(QR 체크, 수기 체크 등).</div>
     </div>
 
     <div class="subsec" id="s1-4">
@@ -632,7 +638,7 @@ footer{margin-top:64px;padding-top:24px;border-top:3px solid var(--line-strong);
     <div class="subsec" id="s1-5">
       <h3><span class="subnum">1.5</span> 교육장 환경 체크</h3>
       <ul>
-        <li><strong>출입 방법</strong> — 강의장 출입 비밀번호 <strong>"8203"</strong>(수원 드림플라자 203호 기준). 사업장별로 출입 방식이 다를 수 있으니 현장 도착 전 재확인.</li>
+        <li><strong>출입 방법</strong> — 강의장 출입 비밀번호 <strong>"8203"</strong>(수원 드림플라자 203호 기준). <strong>타 사업장 출입 방식은 업데이트 필요</strong>.</li>
       </ul>
       <div class="gap"><span class="glabel">확인 필요</span>강의장 개방시간 최종 확정 및 강사 장기출입(장시간 상주) 가능 여부 — 확정되는 대로 별도 안내 예정.</div>
       <ul>
