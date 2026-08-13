@@ -59,7 +59,7 @@ exports.handler = async (event) => {
     }
   }
 
-  if (event.httpMethod === "PUT") {
+  if (event.httpMethod === "PUT" || event.httpMethod === "POST") {
     if (session.role !== "admin") {
       return jsonResponse(403, { error: "수정 권한이 없습니다. 관리자 계정으로 로그인해 주세요." });
     }
